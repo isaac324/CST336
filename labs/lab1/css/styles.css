@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+    color:gray;
+}
+
+header, main, nav, footer {
+    text-align: center;
+}
+
+nav a {
+    padding:15px;
+    padding-bottom: 4px;
+    font-size: 1.8em;
+    text-decoration: none; /* removes underline */
+    color: white;          /* by default, links are blue */
+}
+
+nav a:hover {  /* pseudo class */
+    border-bottom-color: 2px orange solid;
+    font-size: 2em;
+    transition: .9s;  /* transition effect */
+}
+
