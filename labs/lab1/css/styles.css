@@ -3,9 +3,11 @@ body {
     color:gray;
 }
 
-header, main, nav, footer {
+header, nav, footer {
     text-align: center;
 }
+
+
 
 nav a {
     padding:15px;
@@ -16,8 +18,15 @@ nav a {
 }
 
 nav a:hover {  /* pseudo class */
-    border-bottom-color: 2px orange solid;
+    color: orange; 
     font-size: 2em;
     transition: .9s;  /* transition effect */
 }
 
+#me, #welcometext {
+    float:left;
+}
+
+footer {
+    clear:left;
+}
