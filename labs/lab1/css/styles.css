@@ -3,7 +3,13 @@ body {
     color:gray;
 }
 
-header, nav, footer {
+header {
+    text-align: center;
+    color: blue;
+    
+}
+
+nav, footer {
     text-align: center;
 }
 
@@ -13,12 +19,13 @@ nav a {
     padding:15px;
     padding-bottom: 4px;
     font-size: 1.8em;
-    text-decoration: none; /* removes underline */
-    color: white;          /* by default, links are blue */
+    text-decoration: underline; /* removes underline */
+    color: white; /* by default, links are blue */
+    
 }
 
 nav a:hover {  /* pseudo class */
-    color: orange; 
+    color: yellow; 
     font-size: 2em;
     transition: .9s;  /* transition effect */
 }
@@ -29,4 +36,7 @@ nav a:hover {  /* pseudo class */
 
 footer {
     clear:left;
+    font-size: 1.0em;
+    color:cyan;
+    
 }
