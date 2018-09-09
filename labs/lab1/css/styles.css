@@ -1,11 +1,13 @@
 body {
-    background-color: black;
-    color:gray;
+    background-color: LightBlue;
+    background-image: linear-gradient(to bottom right, indigo, cyan);
+    color: white;
 }
 
 header {
     text-align: center;
-    color: blue;
+    color: yellow;
+    font-family: fantasy;
     
 }
 
@@ -16,27 +18,84 @@ nav, footer {
 
 
 nav a {
-    padding:15px;
-    padding-bottom: 4px;
+    padding:12px;
+    padding-bottom: 2.5px;
+    font-family: 'Didact Gothic';
     font-size: 1.8em;
-    text-decoration: underline; /* removes underline */
-    color: white; /* by default, links are blue */
+    text-decoration: none;  /* removes underline */
+    color: black;  /* by default, links are blue */
     
 }
 
 nav a:hover {  /* pseudo class */
     color: yellow; 
     font-size: 2em;
+    text-decoration: underline;
     transition: .9s;  /* transition effect */
 }
 
-#me, #welcometext {
+#me {
     float:left;
+    color: white;
+    font-size: 1.5em;
+    padding-right: 8px;
+}
+
+#welcometext {
+    float:left;
+    color: white;
+    font-size: 1.5em;
+    padding-bottom: 3px;
+    font-family: monospace; 
 }
 
 footer {
     clear:left;
     font-size: 1.0em;
-    color:cyan;
+    color:purple;
+    font-style: oblique;
     
+}
+
+table {
+    margin: 0px auto;
+}
+
+td {
+    padding-right: 10px;
+    font-size: 1.3em;
+    color: black;
+}
+
+td strong {
+    color: indigo;
+}
+
+#table-header {
+    background-color: aqua;
+}
+
+.table-row {
+    background-color: aquamarine;
+}
+
+ul {
+    text-align: left;
+    padding-left: 200px;
+}
+
+.hobby {
+    color: yellow;
+}
+
+h1 {
+    font-family: 'Didact Gothic', fantasy;
+}
+
+h2 {
+    font-family: 'Didact Gothic', fantasy;
+}
+
+#info {
+    text-align: center;
 }
