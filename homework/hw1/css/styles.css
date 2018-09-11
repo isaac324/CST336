@@ -5,6 +5,7 @@ header, h1 {
 }
 
 h2 {
+    clear:left;
     text-align: left;
     font-family: monospace;
     color:#14f411;
@@ -50,13 +51,17 @@ nav a:hover {  /* pseudo class */
 }
 
 #introtext {
+    float:left;
     font-family: monospace;
     font-size: 1.6em;
-    padding: 10px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
+    padding:2px;
+    border-style: solid;
+    border-color: #14f411;
 }
 
 #secondtext {
+    clear: left;
     font-family: monospace;
     font-size: 1.6em;
 }
