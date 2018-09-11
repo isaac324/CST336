@@ -1,10 +1,19 @@
-h1 {
-    color: white;
-} 
+header, h1 {
+    color: #14f411;
+    font-family: 'Didact Gothic';
+    
+}
+
+h2 {
+    text-align: left;
+    font-family: monospace;
+    color:#14f411;
+    font-size: 2.0em;
+}
 
 body {
     background-color: blue;
-    background-image: linear-gradient(to bottom, darkblue, black);
+    background-image: linear-gradient(to bottom, darkblue, black); 
     color: white;
 }
 
@@ -23,15 +32,34 @@ nav a {
     padding:12px;
     padding-bottom: 2.5px;
     font-family: 'monospace';
-    font-size: 1.8em;
-    text-decoration: none;  /* removes underline */
+    font-size: 2.5em;
+    text-decoration: none;   /* removes underline */
     color: white;  /* by default, links are blue */
     
 }
 
 nav a:hover {  /* pseudo class */
     color: red; 
-    font-size: 2.3em;
+    font-size: 2.8em;
     transition: .9s;  /* transition effect */
 }
+
+#v1 {
+    float:left;
+    padding-bottom:20px;
+}
+
+#introtext {
+    font-family: monospace;
+    font-size: 1.6em;
+    padding: 10px;
+    padding-bottom: 40px;
+}
+
+#secondtext {
+    font-family: monospace;
+    font-size: 1.6em;
+}
+
+
 
