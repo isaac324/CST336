@@ -33,7 +33,7 @@
             }
             
             
-            echo "<img src =\"img/$symbol.png\" alt='$symbol' title='".ucfirst($symbol)."' width='70' >";
+            echo "<img src =\"img/$symbol.png\" alt='$symbol' title='".ucfirst($symbol)."' width='15%' >";
             
             }//displaySymbol()
             
@@ -47,9 +47,9 @@
             if($random_value1 == $random_value2 && $random_value3 == $random_value1){
                 echo "<br>Jackpot!!!<br>";
             } else {
-            echo "<br>Random value 1: $random_value1 <br>";
-            echo "Random value 2: $random_value2 <br>";
-            echo "Random value 3: $random_value3 <br>";
+                echo "<br>Random value 1: $random_value1 <br>";
+                echo "Random value 2: $random_value2 <br>";
+                echo "Random value 3: $random_value3 <br>";
             }
         
         ?>
