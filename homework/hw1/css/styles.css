@@ -51,6 +51,11 @@ nav a:hover {  /* pseudo class */
     transition: .9s;  /* transition effect */
 }
 
+#navbar .current {
+    color:red;
+    text-decoration: underline;
+}
+
 #virus1 {
     float:left;
     padding-right: 10px;
