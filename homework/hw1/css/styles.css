@@ -52,7 +52,13 @@ nav a:hover {  /* pseudo class */
     transition: .9s;  /* transition effect */
 }
 
-#v1 {
+#virus1 {
+    float:left;
+    padding-right: 10px;
+    padding-bottom:20px;
+}
+
+#virus2 {
     float:left;
     padding-right: 10px;
     padding-bottom:20px;
