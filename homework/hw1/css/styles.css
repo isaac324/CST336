@@ -81,6 +81,12 @@ nav a:hover {  /* pseudo class */
     font-size: 1.6em;
 }
 
+#thirdtext {
+    clear: left;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 1.6em;
+}
+
 #typetext {
     float: left;
     line-height: 1.3;
