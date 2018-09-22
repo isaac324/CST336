@@ -2,15 +2,6 @@
 
 function displaySymbol($randomValue, $pos){
             
-            //$random_value = rand(0,2); //Generates a random number from 0 to 2
-            
-            // if($random_value == 0){
-            //     $symbol = "seven";
-            // } else if($random_value == 1){
-            //     $symbol = "orange";
-            // } else {
-            //     $symbol = "cherry";
-            // }
             
     switch ($randomValue) {
                 
