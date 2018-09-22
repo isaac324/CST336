@@ -15,7 +15,8 @@ include 'inc/functions.php';
     </head>
     <body>
         
-        <div id="main">    
+        <div id="main">
+                
             <?php
                 play();
             ?>
