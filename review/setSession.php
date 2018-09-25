@@ -3,6 +3,7 @@
 session_start(); //starts or resumes an existing session_start
 
 $_SESSION["my_name"] = "Isaac";
+$_SESSION["course"] = "CST 336 Internet Programmming";
 
 ?>
 

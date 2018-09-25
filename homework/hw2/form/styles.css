@@ -1,0 +1,21 @@
+    body {
+        background-color: white;
+        background-image: url("../img/pokeball.png");
+    }
+    
+    input[type=submit] {
+    font-size: 20px;
+    background-color: gold;
+    color:black;
+    cursor: pointer;
+    }
+    
+     #player1, #player2 {
+        top:248px;
+        position:absolute;
+    }
+    
+    #player1 {
+        
+    }
+    
