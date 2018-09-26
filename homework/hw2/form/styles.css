@@ -1,3 +1,11 @@
+    header, h1 {
+    color: black;
+    background-image: linear-gradient(to bottom, darkred, white); 
+    font-size: 2.0em;
+    margin-left: 15px;
+    text-align:center;
+    }
+    
     body {
         background-color: white;
         background-image: url("../img/pokeball.png");
@@ -17,6 +25,8 @@
     input[type=submit] {
     font-size: 20px;
     background-color: gold;
+    border-style:solid;
+    border-color:gold;
     color:black;
     cursor: pointer;
     }
@@ -27,29 +37,41 @@
     
     #types {
         text-align: center;
-        /*border-style: double;*/
-        /*border-color: navy;*/
     }
     
+    h2 {
+        /*float:left;*/
+        text-align:center;
+        background-color: yellow;
+        background-image: linear-gradient(to bottom, silver, white); 
+        font-size: 1.3em;
+        line-height: 1.5em;
+        border-style: solid;
+        border-color: black;
+        border-width: 3px;
+        width:230px;
+        margin-left:180px;
+        
+    }
     
      #player1, #player2 {
-        top:80px;
+        top:100px;
         position: absolute;
     }
     
     #player1 {
         left:60px;
         border-style: solid;
-        border-color: navy;
-        border-width: 10px;
+        border-color: darkred;
+        border-width: 5px;
         
     }
     
     #player2 {
         left:330px;
         border-style: solid;
-        border-color: navy;
-        border-width: 10px;
+        border-color: blue;
+        border-width: 5px;
     }
     
    #output{
@@ -59,15 +81,26 @@
      text-align:center;
      top:250px;
      font-size:1.5em;
-     line-height: .7em;
+     line-height: 1.3em;
+     border-style: solid;
+     border-color: black;
+     background-color:yellow;
+     background-image: linear-gradient(to bottom, yellow, white); 
      
     }
     
-    /*footer{*/
-    /*    font-family: "Times New Roman", Georgia, Serif;*/
-    /*    font-size:.8em;*/
-    /*    width:600px;*/
-    /*    margin:0 auto;*/
-    /*    padding-top:10px;*/
-    /*}*/
+    footer{
+        text-align: center;
+        font-size:1em;
+        color:black;
+        background-color:white;
+        border-style:solid;
+        border-color:black;
+        background-image: linear-gradient(to bottom, red, white); 
+        width: 400px;
+        margin:0 auto;
+        padding-top:10px;
+        clear: left;
+    }
+    
     

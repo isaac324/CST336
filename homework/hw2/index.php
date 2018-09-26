@@ -15,6 +15,10 @@ include 'inc/battle.php';
     </head>
     <body>
         
+        <header>
+            <h1> Pokemon Types Match Up </h1> <!-- block tag -->
+        </header>
+        
         <figure id = "chart">
             <img src = "img/pokemontypes.jpg" alt ="Type Chart"/>
         </figure>
@@ -40,6 +44,17 @@ include 'inc/battle.php';
             ?>
            
         </div>
+        
+        <br /><br />
+        
+        <footer>
+            CST 336 &copy; 2018 Isaac Avila <br />
+            
+            <strong> Disclaimer:</strong> The information in this website is fake. It is used for academic purposes only.
+            <br />
+            
+            
+        </footer>
         
     </body>
 </html>
