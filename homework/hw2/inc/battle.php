@@ -147,6 +147,25 @@ function displayWinner($randomType1, $randomType2){
     echo "</div>";
 }
 
+function displayMatch($randomType){
+    
+    switch($randomType){ //"fire", "water", "grass", "dark", "psychic", "fighting", ghost, electric, normal, ground
+        case 0: echo "<h3>Strength: Grass, Bug, Ice, Steel <br>
+                Weakness: Water, Ground, Rock </h3>";
+                break;
+        case 1: echo "<h3>Strength: Fire, Ground, Rock <br> 
+                Weakness: Grass, Electric </h3>";
+                break;
+        case 2: echo "<h3>Strength: Water, Ground, Rock <br>
+                Weakness: Fire, Bug, Ice, Flying </h3>";
+                break;
+        case 3: echo "<h3>Strength: Psychic, Ghost <br>
+                Weakness: Fighting, Bug </h3>";
+                break;
+    }
+    
+}
+
 function play() {
     global $p_types;
     
@@ -160,6 +179,8 @@ function play() {
     echo "<h2> $versus1 vs $versus2 </h2>";
     
     displayWinner($randomType1, $randomType2);
+    
+    displayMatch($randomType1);
 }
 
 ?>

@@ -27,4 +27,10 @@ function getImageURLs($keyword, $orientation="horizontal") {
     return $imageURLs;
 }
 
+if(isset($_GET['keyword'])) {
+  include 'api/pixabayAPI.php';
+  $imageURLs = getImageURLs($_GET['keyword']);
+  $backgroundImage = $imageURLs[array_rand($imageURLs)];
+}
+
 ?>
