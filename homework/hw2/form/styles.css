@@ -3,6 +3,13 @@
         background-image: url("../img/pokeball.png");
     }
     
+    #main {
+        width:600px;
+        height:500px;
+        position:relative;
+        margin:0 auto;
+    }
+    
     form {
         text-align: center;
     }
@@ -26,14 +33,12 @@
     
     
      #player1, #player2 {
-        top:260px;
-        text-align: center;
+        top:80px;
         position: absolute;
-        float: left;
     }
     
     #player1 {
-        left:420px;
+        left:60px;
         border-style: solid;
         border-color: navy;
         border-width: 10px;
@@ -41,11 +46,28 @@
     }
     
     #player2 {
-        left:850px;
+        left:330px;
         border-style: solid;
         border-color: navy;
         border-width: 10px;
     }
     
+   #output{
+     width:600px;   
+     margin:0 auto;
+     position:absolute;
+     text-align:center;
+     top:250px;
+     font-size:1.5em;
+     line-height: .7em;
+     
+    }
     
+    /*footer{*/
+    /*    font-family: "Times New Roman", Georgia, Serif;*/
+    /*    font-size:.8em;*/
+    /*    width:600px;*/
+    /*    margin:0 auto;*/
+    /*    padding-top:10px;*/
+    /*}*/
     
