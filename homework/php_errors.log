@@ -1,3 +1,14 @@
 [25-Sep-2018 17:53:29 UTC] PHP Fatal error:  Call to undefined function play() in /home/ubuntu/workspace/cst336/homework/hw2/index.php on line 21
 [25-Sep-2018 17:53:29 UTC] PHP Stack trace:
 [25-Sep-2018 17:53:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/homework/hw2/index.php:0
+[25-Sep-2018 20:25:32 UTC] PHP Fatal error:  Call to undefined function displayWinner() in /home/ubuntu/workspace/cst336/homework/hw2/inc/functions.php on line 33
+[25-Sep-2018 20:25:32 UTC] PHP Stack trace:
+[25-Sep-2018 20:25:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/homework/hw2/index.php:0
+[25-Sep-2018 20:25:32 UTC] PHP   2. play() /home/ubuntu/workspace/cst336/homework/hw2/index.php:25
+[25-Sep-2018 20:28:23 UTC] PHP Fatal error:  Call to undefined function displayWinner() in /home/ubuntu/workspace/cst336/homework/hw2/inc/functions.php on line 34
+[25-Sep-2018 20:28:23 UTC] PHP Stack trace:
+[25-Sep-2018 20:28:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/homework/hw2/index.php:0
+[25-Sep-2018 20:28:23 UTC] PHP   2. play() /home/ubuntu/workspace/cst336/homework/hw2/index.php:25
+[25-Sep-2018 20:38:24 UTC] PHP Parse error:  syntax error, unexpected 'types' (T_STRING), expecting ',' or ';' in /home/ubuntu/workspace/cst336/homework/hw2/inc/functions.php on line 25
+[25-Sep-2018 20:38:24 UTC] PHP Stack trace:
+[25-Sep-2018 20:38:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/homework/hw2/index.php:0
