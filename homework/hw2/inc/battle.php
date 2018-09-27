@@ -180,7 +180,7 @@ function play() {
     
     displayWinner($randomType1, $randomType2);
     
-    displayMatch($randomType1);
+    //displayMatch($randomType1);
 }
 
 ?>
