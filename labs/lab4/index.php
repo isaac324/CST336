@@ -57,7 +57,10 @@ function formIsValid() {
             
             select {
         
-                background-color: aqua;
+                background-color: grey;
+                color:yellow;
+                border-style: solid;
+                border-color: yellow;
             }
             
             .current {
