@@ -55,6 +55,18 @@ function formIsValid() {
                 
             }
             
+            select {
+        
+                background-color: aqua;
+            }
+            
+            .current {
+                background-color:grey;
+                opacity: 0.9;
+                border-style: solid;
+                border-color:yellow;
+            }
+            
             #carouselExampleIndicators{
                  width:500px;
                  margin:0 auto; 
@@ -82,9 +94,9 @@ function formIsValid() {
               
               ?>
             
-            > Horizontal
+            ><span class = "current">Horizontal</span>
             <input type="radio" name="layout" value="vertical"  
-               <?= ($_GET['layout'] == "vertical")?" checked":"" ?>  > Vertical
+               <?= ($_GET['layout'] == "vertical")?" checked":"" ?>  ><span class = "current">Vertical</span>
         
 
             <select name="category">
@@ -156,7 +168,7 @@ function formIsValid() {
         <br /><br/>
         
         <footer>
-            CST 336 &copy; 2018 Isaac Avila <br />
+            <span class = "current">CST 336 &copy; 2018 Isaac Avila</span> <br />
             
             <br />
             
