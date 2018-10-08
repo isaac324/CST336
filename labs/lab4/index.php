@@ -15,7 +15,8 @@ if (isset($_GET["keyword"])) {  //checks if the form has been submitted
     }
     
     
-    echo "You searched for:  $keyword";
+    echo "You searched for: ";
+    echo "<span class = 'current'>$keyword</span>";
     
 
    $imageURLs = getImageURLs($keyword, $_GET["layout"]);
