@@ -34,7 +34,7 @@
         <?php
         if (isset($_POST["number"])) {  //checks if the form has been submitted
         $keyword = $_POST["number"];
-            }
+        }
         
         if(isset($_POST["length"])) {
             $length = $_POST["length"];
