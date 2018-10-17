@@ -1,0 +1,49 @@
+body {
+    text-align: center;
+    background-size: cover;
+}
+h1, form {
+    border-style: solid;
+    background-color: Lightgray;
+    padding: 5px;
+}
+h2 {
+    color: black;
+    border-style: solid;
+    border-color: black;
+}
+h3 {
+    border-style: solid;
+    border-color: black;
+    background-color: black;
+    color: yellow;
+}
+#profile {
+    text-align: center;
+}
+#characters {
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+}
+#bio {
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    background-color: tan;
+}
+.topic {
+    color: yellow;
+}
+footer{
+    text-align: center;
+    font-size:1em;
+    color: yellow;
+    background-color:black;
+    border-style:solid;
+    border-color:black;
+    width: 300px;
+    margin:0 auto;
+    padding-top:10px;
+    clear: left;
+}

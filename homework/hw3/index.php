@@ -82,48 +82,14 @@ include 'inc/character.php';
 <html>
     <head>
         <title>Homework 3</title>
+        
+        <link rel="stylesheet" href="css/styles.css" type="text/css" />
+        
         <style>
             body {
                 text-align: center;
                 background-image: url(<?=$backgroundImage?>);
                 background-size: cover;
-            }
-            
-            h1, form {
-                border-style: solid;
-                background-color: Lightgray;
-                padding: 5px;
-            }
-            h2 {
-                color: black;
-                border-style: solid;
-                border-color: black;
-            }
-            h3 {
-                border-style: solid;
-                border-color: black;
-                background-color: black;
-                color: yellow;
-            }
-            #profile {
-                text-align: center;
-            }
-            #characters {
-                border-style: solid;
-                border-color: black;
-                border-width: 5px;
-            }
-            footer{
-                text-align: center;
-                font-size:1em;
-                color: yellow;
-                background-color:black;
-                border-style:solid;
-                border-color:black;
-                width: 300px;
-                margin:0 auto;
-                padding-top:10px;
-                clear: left;
             }
         </style>
     </head>
@@ -166,20 +132,6 @@ include 'inc/character.php';
             Would you like some music?
             <input type="checkbox" name="music" value="yes"> Yes
             <br><br>
-            
-            <!--Color:-->
-            <!--<select name="color">-->
-            <!--    <option value=""> Select one </option>-->
-            <!--    <option value="white">White</option>-->
-            <!--    <option value="black">Black</option>-->
-            <!--    <option value="yellow">Yellow</option>-->
-            <!--    <option value="blue">Blue</option>-->
-            <!--    <option value="red">Red</option>-->
-            <!--    <option value="green">Green</option>-->
-            <!--    <option value="purple">Purple</option>-->
-            <!--    <option value="pink">Pink</option>-->
-            <!--</select>-->
-            <!--<br><br>-->
             
             <input type="submit" name="submit" value="Search"/>
         </form>
