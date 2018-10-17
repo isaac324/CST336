@@ -230,9 +230,9 @@ include 'inc/character.php';
             
             <br />
             
-            <!--<figure>-->
-            <!--    <img src = "img/buddy.png" width = '70'> -->
-            <!--</figure>-->
+            <figure>
+                <img src = "img/buddy.png" width = '60'> 
+            </figure>
         </footer>
         
     </body>
