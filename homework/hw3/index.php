@@ -81,9 +81,10 @@ include 'inc/character.php';
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Homework 3</title>
+        <title>Octopath Finder</title>
         
         <link rel="stylesheet" href="css/styles.css" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
         
         <style>
             body {
@@ -95,7 +96,7 @@ include 'inc/character.php';
     </head>
     <body> 
         <!--<body style = 'background-color: php echo $color;'>-->
-        <h1> Homework 3 </h1>
+        <h1> <strong>Octopath Finder</strong> </h1>
         
         <form method="POST">
             

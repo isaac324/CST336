@@ -10,7 +10,7 @@ function character($traveler){
         echo "<div id = 'bio'>";
         echo "<ul>";
         echo "<li><span class = 'topic'><strong>Job:</strong></span> Cleric</li>";
-        echo "<li><span class = 'topic'><strong>Hometown:</strong></span> Frostlands - Flamesgrace</li>";
+        echo "<li><span class = 'topic'><strong>Region:</strong></span> Frostlands - Flamesgrace</li>";
         echo "<li><span class = 'topic'><strong>Weapon:</strong></span> Staves</li>";
         echo "<li><span class = 'topic'><strong>Path Action:</strong></span> Guide</li>";
         echo "</ul>";
@@ -25,7 +25,7 @@ function character($traveler){
         echo "<div id = 'bio'>";
         echo "<ul>";
         echo "<li><span class = 'topic'><strong>Job:</strong></span> Scholar</li>";
-        echo "<li><span class = 'topic'><strong>Hometown:</strong></span> Flatlands - Atlasdam</li>";
+        echo "<li><span class = 'topic'><strong>Region:</strong></span> Flatlands - Atlasdam</li>";
         echo "<li><span class = 'topic'><strong>Weapon:</strong></span> Staves</li>";
         echo "<li><span class = 'topic'><strong>Path Action:</strong></span> Scrutinize</li>";
         echo "</ul>";
@@ -40,7 +40,7 @@ function character($traveler){
         echo "<div id = 'bio'>";
         echo "<ul>";
         echo "<li><span class = 'topic'><strong>Job:</strong></span> Merchant</li>";
-        echo "<li><span class = 'topic'><strong>Hometown:</strong></span> Coastlands - Rippletide</li>";
+        echo "<li><span class = 'topic'><strong>Region:</strong></span> Coastlands - Rippletide</li>";
         echo "<li><span class = 'topic'><strong>Weapon:</strong></span> Polearms and Bows</li>";
         echo "<li><span class = 'topic'><strong>Path Action:</strong></span> Purchase</li>";
         echo "</ul>";
@@ -55,7 +55,7 @@ function character($traveler){
         echo "<div id = 'bio'>";
         echo "<ul>";
         echo "<li><span class = 'topic'><strong>Job:</strong></span> Warrior</li>";
-        echo "<li><span class = 'topic'><strong>Hometown:</strong></span> Highlands - Cobblestone</li>";
+        echo "<li><span class = 'topic'><strong>Region:</strong></span> Highlands - Cobblestone</li>";
         echo "<li><span class = 'topic'><strong>Weapon:</strong></span> Swords and Polearms</li>";
         echo "<li><span class = 'topic'><strong>Path Action:</strong></span> Challenge</li>";
         echo "</ul>";
@@ -70,7 +70,7 @@ function character($traveler){
         echo "<div id = 'bio'>";
         echo "<ul>";
         echo "<li><span class = 'topic'><strong>Job:</strong></span> Dancer</li>";
-        echo "<li><span class = 'topic'><strong>Hometown:</strong></span> Sunlands - Sunshade</li>";
+        echo "<li><span class = 'topic'><strong>Region:</strong></span> Sunlands - Sunshade</li>";
         echo "<li><span class = 'topic'><strong>Weapon:</strong></span> Daggers</li>";
         echo "<li><span class = 'topic'><strong>Path Action:</strong></span> Allure</li>";
         echo "</ul>";
@@ -85,7 +85,7 @@ function character($traveler){
         echo "<div id = 'bio'>";
         echo "<ul>";
         echo "<li><span class = 'topic'><strong>Job:</strong></span> Apothecary</li>";
-        echo "<li><span class = 'topic'><strong>Hometown:</strong></span> Riverlands - Clearbrook</li>";
+        echo "<li><span class = 'topic'><strong>Region:</strong></span> Riverlands - Clearbrook</li>";
         echo "<li><span class = 'topic'><strong>Weapon:</strong></span> Axes</li>";
         echo "<li><span class = 'topic'><strong>Path Action:</strong></span> Inquire</li>";
         echo "</ul>";
@@ -100,7 +100,7 @@ function character($traveler){
         echo "<div id = 'bio'>";
         echo "<ul>";
         echo "<li><span class = 'topic'><strong>Job:</strong></span> Thief</li>";
-        echo "<li><span class = 'topic'><strong>Hometown:</strong></span> Cliftlands - Bolderfall</li>";
+        echo "<li><span class = 'topic'><strong>Region:</strong></span> Cliftlands - Bolderfall</li>";
         echo "<li><span class = 'topic'><strong>Weapon:</strong></span> Daggers and Swords</li>";
         echo "<li><span class = 'topic'><strong>Path Action:</strong></span> Steal</li>";
         echo "</ul>";
@@ -115,7 +115,7 @@ function character($traveler){
         echo "<div id = 'bio'>";
         echo "<ul>";
         echo "<li><span class = 'topic'><strong>Job:</strong></span> Hunter</li>";
-        echo "<li><span class = 'topic'><strong>Hometown:</strong></span> Woodlands - S'warkii</li>";
+        echo "<li><span class = 'topic'><strong>Region:</strong></span> Woodlands - S'warkii</li>";
         echo "<li><span class = 'topic'><strong>Weapon:</strong></span> Bows and Axes</li>";
         echo "<li><span class = 'topic'><strong>Path Action:</strong></span> Provoke</li>";
         echo "</ul>";

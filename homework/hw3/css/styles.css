@@ -2,12 +2,20 @@ body {
     text-align: center;
     background-size: cover;
 }
-h1, form {
+h1 {
+    font-family: 'Cinzel', serif;
+    border-style: solid;
+    background-color: Lightgray;
+    padding: 5px;
+    font-size: 3.0em;
+}
+form {
     border-style: solid;
     background-color: Lightgray;
     padding: 5px;
 }
 h2 {
+    font-family: 'Cinzel', serif;
     color: black;
     border-style: solid;
     border-color: black;
@@ -27,12 +35,14 @@ h3 {
     border-width: 5px;
 }
 #bio {
+    font-family: 'Cinzel', serif;
     text-align: center;
     border-style: solid;
     border-color: black;
     background-color: tan;
 }
 .topic {
+    font-family: 'Cinzel', serif;
     color: yellow;
 }
 footer{
