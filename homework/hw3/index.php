@@ -146,21 +146,21 @@ include 'inc/character.php';
                 $ophilia = 0; $cyrus = 0; $tressa = 0; $olberic = 0; $primrose = 0; $alfyn = 0; $therion = 0; $haanit = 0;
                 
                 if($job == "cleric"){
-                    $ophilia += 1;
+                    $ophilia += 2;
                 } else if($job == "scholar"){
-                    $cyrus += 1;
+                    $cyrus += 2;
                 } else if($job == "merchant"){
-                    $tressa += 1;
+                    $tressa += 2;
                 } else if($job == "warrior"){
-                    $olberic += 1;
+                    $olberic += 2;
                 } else if($job == "dancer"){
-                    $primrose += 1;
+                    $primrose += 2;
                 } else if($job == "apothecary"){
-                    $alfyn += 1;
+                    $alfyn += 2;
                 } else if($job == "thief"){
-                    $therion += 1;
+                    $therion += 2;
                 } else if($job == "hunter"){
-                    $haanit += 1;
+                    $haanit += 2;
                 }
                 
                 if(ucfirst($region) == "Tundra"){
