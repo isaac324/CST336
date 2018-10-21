@@ -2,6 +2,7 @@
 <?php
     include 'functions.php';
     session_start();
+    //session_destroy();
     
     // If 'removeId' has been sent, search the cart for that itemId and unset it
     if(isset($_POST['removeId'])){

@@ -56,7 +56,7 @@ function displayResults() {
             $itemId = $item['itemId'];
             
             //Display item as table row
-            echo '<tr>';
+            echo "<tr>";
             echo "<td><img src='$itemImage'></td>";
             echo "<td><h4>$itemName</h4></td>";
             echo "<td><h4>$$itemPrice</h4></td>";
@@ -75,7 +75,7 @@ function displayResults() {
             } else {
                 echo '<td><button class="btn btn-warning">Add</button></td>';
             }
-            echo '</tr>';
+            echo "</tr>";
             echo "</form>";
         }
         echo "</table>";

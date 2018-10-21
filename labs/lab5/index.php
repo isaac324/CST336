@@ -3,6 +3,7 @@
     
     //Start the session in any php file where you will be using sessions
     session_start();
+    //session_destroy();
     
     if(!isset($_SESSION['cart'])) {
         $_SESSION['cart'] = array();
@@ -54,6 +55,14 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <title>Products Page</title>
+        
+        <style>
+            footer {
+                text-align: center;
+                padding: 10px;
+                margin-top: 350px;
+            }
+        </style>
     </head>
     <body>
     <div class='container'>
@@ -90,5 +99,19 @@
             
         </div>
     </div>
+    
+    <br /><br />
+    <footer>
+            <span class = "current">CST 336 &copy; 2018 Isaac Avila</span> <br />
+            
+            <br />
+            <strong> Disclaimer:</strong> The information in this website is fake. It is used for academic purposes only.
+            <br />
+            
+            <figure>
+                <img src = "img/buddy.png" width = '70'> 
+            </figure>
+        </footer>
+    
     </body>
 </html>
