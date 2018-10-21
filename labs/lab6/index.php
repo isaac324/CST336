@@ -56,7 +56,16 @@ function filterProducts() {
     $stmt = $dbConn->prepare($sql);
     $stmt->execute($namedParameters);
     $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    print_r($records);
+    //print_r($records);
+    
+    foreach($records as $record){
+        
+        
+        echo "<a href='productInfo.php?productId=7'>";
+        echo $record['productName'];
+        echo "</a> ";
+        echo $record['productDescription'] . " $" . $record['price'] . "<br>";
+    }
 }
 
 ?>
@@ -82,13 +91,15 @@ function filterProducts() {
             
             Price: From: <input type="text" name="priceFrom" />
             To: <input type="text" name="priceTo" />
-            
+            <br>
             Order By:
             Price <input type="radio" name="orderBy" value="productPrice">
             Name <input type="radio" name="orderBy" value="productName">
-            
-            <input type="submit" name="submit" value="Search"/>
+            <br>
+            <input type="submit" name="submit" value="Search!"/>
         </form>
+        <br>
+        <hr>
         
         <?= filterProducts() ?>
         
