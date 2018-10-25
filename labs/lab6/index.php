@@ -1,6 +1,6 @@
 <?php
 
-include '../../inc/dbConnections.php';
+include '../../inc/dbConnection.php';
 $dbConn = startConnection("ottermart");
 
 function displayCategories() { 

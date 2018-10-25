@@ -101,37 +101,37 @@ include 'inc/character.php';
         <form method="POST">
             
             Pick a Job: <br> 
-            <input type="radio" name="job" value="cleric"> Cleric
-            <input type="radio" name="job" value="scholar"> Scholar
-            <input type="radio" name="job" value="merchant"> Merchant
-            <input type="radio" name="job" value="warrior"> Warrior
-            <input type="radio" name="job" value="dancer"> Dancer
-            <input type="radio" name="job" value="apothecary"> Apothecary
-            <input type="radio" name="job" value="thief"> Thief
-            <input type="radio" name="job" value="hunter"> Hunter
+            <input type="radio" name="job" value="cleric" <?php if($_POST['job'] == "cleric"){echo "checked";} ?> > Cleric
+            <input type="radio" name="job" value="scholar" <?php if($_POST['job'] == "scholar"){echo "checked";} ?> > Scholar
+            <input type="radio" name="job" value="merchant" <?php if($_POST['job'] == "merchant"){echo "checked";} ?> > Merchant
+            <input type="radio" name="job" value="warrior" <?php if($_POST['job'] == "warrior"){echo "checked";} ?> > Warrior
+            <input type="radio" name="job" value="dancer" <?php if($_POST['job'] == "dancer"){echo "checked";} ?> > Dancer
+            <input type="radio" name="job" value="apothecary" <?php if($_POST['job'] == "apothecary"){echo "checked";} ?> > Apothecary
+            <input type="radio" name="job" value="thief" <?php if($_POST['job'] == "thief"){echo "checked";} ?> > Thief
+            <input type="radio" name="job" value="hunter" <?php if($_POST['job'] == "hunter"){echo "checked";} ?> > Hunter
             <br /><br />
             
             Pick a region: 
-            <input type="text" name="region" placeholder="Region" /><br>
+            <input type="text" name="region" placeholder="Region" value="<?php if(isset($_POST['region'])){ echo $_POST['region'];} ?>";/><br>
             (Ex: Tundra, Desert, Forest, Mountain, Canyon, Coast, River, Plains) <br><br>  
             
             What is your play style? <br>
-            <input type="radio" name="gameplay" value="safe"> Play it Safe. <br>  
-            <input type="radio" name="gameplay" value="risk"> High Risk, High Reward.
+            <input type="radio" name="gameplay" value="safe" <?php if($_POST['gameplay'] == "safe"){echo "checked";} ?> > Play it Safe. <br>  
+            <input type="radio" name="gameplay" value="risk" <?php if($_POST['gameplay'] == "risk"){echo "checked";} ?> > High Risk, High Reward.
             <br><br>
             
             How do you interact with NPCs?
             <select name="npc">
                 <option value=""> Select one </option>
-                <option value="fight">Fight them.</option>
-                <option value="item">Get items from them.</option>
-                <option value="info">Get information from them.</option>
-                <option value="help">Get help from them.</option>
+                <option value="fight" <?php if($_POST['npc'] == "fight"){echo "selected";} ?> >Fight them.</option>
+                <option value="item" <?php if($_POST['npc'] == "item"){echo "selected";} ?> >Get items from them.</option>
+                <option value="info" <?php if($_POST['npc'] == "info"){echo "selected";} ?> >Get information from them.</option>
+                <option value="help" <?php if($_POST['npc'] == "help"){echo "selected";} ?> >Get help from them.</option>
             </select>
             <br><br>
             
             Would you like some music?
-            <input type="checkbox" name="music" value="yes"> Yes
+            <input type="checkbox" name="music" value="yes" <?php if(isset($_POST['music'])){ echo "checked = 'checked'";} ?> > Yes
             <br><br>
             
             <input type="submit" name="submit" value="Search"/>
