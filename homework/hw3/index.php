@@ -22,9 +22,6 @@ include 'inc/character.php';
     
     if(isset($_POST["npc"])) {
         $npc = $_POST["npc"];
-        // if(validBackground()){
-        //     $color = $_POST["color"];
-        // }
     }
     
     // if(isset($_POST["color"])) {

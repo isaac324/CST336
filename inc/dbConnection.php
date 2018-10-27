@@ -1,6 +1,6 @@
 <?php
 
-function startConnection($dbname="ottermart"){
+function startConnection($dbname = "ottermart"){
     //creating database connection
     $host = "localhost";
 //  $dbname = "ottermart";
