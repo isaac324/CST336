@@ -40,7 +40,7 @@ function filterProducts() {
         //This SQL prevents SQL INJECTION by using a named parameter 
         $sql .= " AND productName LIKE :product 
                   OR productDescription LIKE :product";
-        $namedParameters[':product'] = "%$product%";
+        $namedParameters[':product'] = '%$product%';
     }
     
     if(!empty($_GET['category'])){
@@ -125,7 +125,11 @@ function filterProducts() {
         <br>
         <hr>
         
-        <?= filterProducts() ?>
+        <?php
+            if(isset($_GET['searchForm'])) {
+                filterProducts();
+            }
+        ?>
         
     </body>
 </html>
