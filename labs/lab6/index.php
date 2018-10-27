@@ -23,12 +23,14 @@ function displayCategories() {
 
 function filterProducts() {
     global $dbConn;
+    $product = $_GET['productName'];
+    
+    if(isset($_GET['searchForm'])) {
     
     echo "<h3>Products Found: </h3>";
     
     $namedParameters = array();
-    $product = $_GET['productName'];
-    //$description = $_GET['productDescription'];
+    //$product = $_GET['productName'];
     
     //This SQL works but it doesn't prevent SQL injection (due to single quotes)
     //$sql = "SELECT * FROM om_product 
@@ -40,7 +42,7 @@ function filterProducts() {
         //This SQL prevents SQL INJECTION by using a named parameter 
         $sql .= " AND productName LIKE :product 
                   OR productDescription LIKE :product";
-        $namedParameters[':product'] = '%$product%';
+        $namedParameters[':product'] = "%$product%";
     }
     
     if(!empty($_GET['category'])){
@@ -69,6 +71,8 @@ function filterProducts() {
         
     }
     
+    //}
+    
     $stmt = $dbConn->prepare($sql);
     $stmt->execute($namedParameters);
     $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -81,8 +85,12 @@ function filterProducts() {
         echo $record['productName'];
         echo "</a> ";
         echo $record['productDescription'] . " $" . $record['price'] . "<br>";
+        echo "<br>";
         
     }
+    
+    }
+    
 }
 
 ?>
@@ -125,11 +133,10 @@ function filterProducts() {
         <br>
         <hr>
         
-        <?php
-            if(isset($_GET['searchForm'])) {
-                filterProducts();
-            }
-        ?>
+            <!--if(isset($_GET['searchForm'])) {-->
+                
+            <!--}-->
+        <?= filterProducts() ?>
         
     </body>
 </html>

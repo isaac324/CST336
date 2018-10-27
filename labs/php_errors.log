@@ -28,3 +28,9 @@ Stack trace:
 #1 /home/ubuntu/workspace/cst336/labs/lab6/productInfo.php(58): displayProductInfo()
 #2 {main}
   thrown in /home/ubuntu/workspace/cst336/labs/lab6/productInfo.php on line 18
+[27-Oct-2018 10:11:20 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab6/index.php:77
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab6/index.php(77): PDOStatement->execute(NULL)
+#1 /home/ubuntu/workspace/cst336/labs/lab6/index.php(136): filterProducts()
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab6/index.php on line 77
