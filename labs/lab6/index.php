@@ -104,6 +104,11 @@ function filterProducts() {
             h1, form{
                 text-align:center;
             }
+            footer {
+                text-align: center;
+                padding: 10px;
+                margin-top: 250px;
+            }
         </style>
     </head>
     <body>
@@ -137,6 +142,19 @@ function filterProducts() {
                 
             <!--}-->
         <?= filterProducts() ?>
+        
+        <br /><br />
+        <footer>
+            <span class = "current">CST 336 &copy; 2018 Isaac Avila</span> <br />
+            
+            <br />
+            <strong> Disclaimer:</strong> The information in this website is fake. It is used for academic purposes only.
+            <br />
+            
+            <figure>
+                <img src = "img/buddy.png" width = '70'> 
+            </figure>
+        </footer>
         
     </body>
 </html>
