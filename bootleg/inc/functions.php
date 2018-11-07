@@ -1,7 +1,9 @@
 <?php
 session_start();
+
 include 'inc/dbConnection.php';
 $dbConn = startConnection("project");
+
 function displayGenres() { 
     global $dbConn;
     
@@ -19,6 +21,8 @@ function displayGenres() {
         echo "<option value='".$record['genreId']."'>" . $record['genName'] . "</option>";
     }
 }
+
+
 function filterMovies() {
     global $dbConn;
     $movie = $_GET['movieName'];
@@ -60,14 +64,14 @@ function filterMovies() {
                 $sql .= " ORDER BY year";
             }
             
-        }
-        
-        if (isset($_GET['orderBy'])) {
+            if (isset($_GET['orderBy'])) {
             
-            if($_GET['orderBy'] == "dc") {
-                $sql .= " DESC";
-            } else {
-                $sql .= " ASC";
+                if($_GET['orderBy'] == "dc") {
+                    $sql .= " DESC";
+                } else {
+                    $sql .= " ASC";
+                }
+                
             }
             
         }
@@ -141,11 +145,15 @@ function filterMovies() {
     }
     
 }
+
+
+
 function displayCart(){
     if(isset($_SESSION['cart'])) {
         
         echo "<table class='table'>";
         foreach ($_SESSION['cart'] as $item) {
+
             $itemId = $item['id'];
             $itemQuant = $item['quantity'];
             
@@ -182,6 +190,9 @@ function displayCart(){
         echo '</form>';
     }
 }
+
+
+
 function displayCartCount() {
     //echo count($_SESSION['cart']);
     
@@ -195,6 +206,9 @@ function displayCartCount() {
     
     echo $cartTotal;
 }
+
+
+
 function addRemove() {
     //if rmoveId sent, search cart for itemId
     if (isset($_POST['removeId'])) {
@@ -220,6 +234,9 @@ function addRemove() {
         }
     }
 }
+
+
+
 function displayProductInfo(){
     global $dbConn;
     
@@ -281,4 +298,5 @@ function displayProductInfo(){
     
     //print_r($records);
 }
+
 ?>
