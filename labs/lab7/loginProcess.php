@@ -28,6 +28,10 @@ $record = $stmt->fetch(PDO::FETCH_ASSOC); //we're expecting just one record
     
 if (empty($record)) {
     
+    // $check = false;
+    // loginCheck($check);
+    //echo "Wrong username or password!!";
+    header('Location: index.php');
     echo "Wrong username or password!!";
     //return false;
     
@@ -39,7 +43,11 @@ if (empty($record)) {
 }
 
 
-// function loginCheck(){
+// function loginCheck($check){
+//     if($check == false){
+//         echo "<br><br>";
+//         echo "Wrong username or password!!";
+//     }
     
 // }
 
