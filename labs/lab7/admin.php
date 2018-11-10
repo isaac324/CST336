@@ -28,7 +28,7 @@ validateSession();
                 
                 //alert();
                 //prompt();
-                return confirm("Really??");
+                return confirm("Are you sure you want to delete this?");
                 
             }
             

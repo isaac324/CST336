@@ -27,6 +27,8 @@ if(isset($_GET['addProduct'])) { //checks whether the form was submitted
     $stmt->execute($np);
     echo "New Product was added!";
     
+    header("Location: admin.php");
+    
 }
 
 ?>

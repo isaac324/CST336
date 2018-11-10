@@ -22,23 +22,37 @@ if(isset($_GET['updateProduct'])){ //user has submitted update form
                catId = :catId,
                productImage = :productImage
             WHERE productId = " . $_GET['productId'];
-         
+            
+    $np = array();
+    $np[':productName'] = $productName;
+    $np[':productDescription'] = $description;
+    $np[':price'] = $price;
+    $np[':catId'] = $catId;
+    $np[':productImage'] = $image;
+    
+    $stmt = $dbConn->prepare($sql);
+    $stmt->execute($np);
+    //$record = $stmt->fetch(PDO::FETCH_ASSOC); //we're expecting just one record
+    
+    header("Location: admin.php");
 }
 
 if(isset($_GET['productId'])){
     
     $productInfo = getProductInfo($_GET['productId']);
     
-    print_r($productInfo);
+    //print_r($productInfo);
     
 }
+
+//header("Location: admin.php");
 
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Update Products! </title>
+        <title> Update Products </title>
     </head>
     <body>
 
