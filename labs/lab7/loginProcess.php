@@ -30,9 +30,9 @@ if (empty($record)) {
     
     // $check = false;
     // loginCheck($check);
-    //echo "Wrong username or password!!";
-    header('Location: index.php');
     echo "Wrong username or password!!";
+    //header('Location: index.php');
+    //echo "Wrong username or password!!";
     //return false;
     
 } else {
