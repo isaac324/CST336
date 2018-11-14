@@ -4,14 +4,24 @@
 		<title>Homework 4</title>
 		<link rel="stylesheet" type="text/css" href="rps.css">
 		<script language="javascript" type="text/javascript" src="rps.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+// 		$(document).ready(function(){
+// 		    $("btnGo").click(function(){
+// 		        $("#EndMessage").fadeIn(3000);
+// 		    });
+		    
+// 		});
+		</script>
+		
 	</head>
 	<body onload="init()">
 	    <div id="gameWindow">
 		    
 		    <div id="introScreen">
 		        <div id="introScreenContent">
-		            <h1>Rock Paper Scissors</h1>
-		            <h3>Pokemon Edition</h3>
+		            <h1 id="intro">Rock Paper Scissors</h1>
+		            <h3 id="intro2">Pokemon Edition</h3>
 		            <div id="btnStart" class="button" onclick="startGame()"><b>Battle!</b></div>
 		        </div>
 		    </div>
@@ -50,18 +60,17 @@
 				<br><br>
 				<div id="lblfire" class="iconLabel">
 					<img src="images/fire.png">
-					<br>fire
+					<br>Fire
 				</div>
 				<div id="lblwater" class="iconLabel">
 					<img src="images/water.png">
-					<br>water
+					<br>Water
 				</div>
 				<div id="lblgrass" class="iconLabel">
 					<img src="images/grass.png">
-					<br>grass
+					<br>Grass
 				</div>
 			</div>
-
 			
 		</div>
 		
