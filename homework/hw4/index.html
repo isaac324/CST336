@@ -6,12 +6,13 @@
 		<script language="javascript" type="text/javascript" src="rps.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script>
-// 		$(document).ready(function(){
-// 		    $("btnGo").click(function(){
-// 		        $("#EndMessage").fadeIn(3000);
-// 		    });
-		    
-// 		});
+		$(document).ready(function(){
+		    var backgnd = ["yellow", "cyan", "lime", "navy", "magenta", "silver", "black"];
+		    var rand = backgnd[Math.floor(Math.random() * backgnd.length)];
+		    $("h1").css("color", rand);
+		  //  $("h2").css("color", rand);
+		    $("h3").css("color", rand);
+		});
 		</script>
 		
 	</head>
