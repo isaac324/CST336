@@ -20,14 +20,14 @@
                 document.getElementById("reappear").style.display = "inline";
             }
             
-            // function reappear() {
-            //     //alert("bye");
-            //     document.getElementById("catImage").src="img/now_you_see_me.png";
-            //     document.getElementById("message").innerHTML = "<i>Now you see me...</i>";
-            //     document.getElementById("message").style.color = "black";
-            //     document.getElementById("doMagic").style.display = "inline";
-            //     document.getElementById("reappear").style.display = "none";
-            // }
+            function reappear() {
+                getEl("catImage").src="img/now_you_see_me.png";
+                
+                document.getElementById("message").innerHTML = "<i>Now you see me...</i>";
+                document.getElementById("message").style.color = "black";
+                document.getElementById("reappear").style.display = "none";
+                document.getElementById("doMagic").style.display = "inline";
+            }
             
         </script>
         

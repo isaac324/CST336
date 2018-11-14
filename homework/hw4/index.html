@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Homework 4</title>
+		<link rel="stylesheet" type="text/css" href="rps.css">
+		<script language="javascript" type="text/javascript" src="rps.js"></script>
+	</head>
+	<body onload="init()">
+	    <div id="gameWindow">
+		    
+		    <div id="introScreen">
+		        <div id="introScreenContent">
+		            <h1>Rock Paper Scissors</h1>
+		            <h3>Pokemon Edition</h3>
+		            <div id="btnStart" class="button" onclick="startGame()"><b>Battle!</b></div>
+		        </div>
+		    </div>
+		    
+		    <div id="endScreen">
+		        <div id="endScreenContent">
+		            <h1 id="EndTitle">Something beats something</h1>
+		            <h1 id="EndMessage">You Win, Lose, or Tie</h1>
+		            <div id="btnReplay" class="button" onclick="replay()">Play Again</div>
+		        </div>
+		    </div>
+		    
+		    <div id="btnGo" onclick="go()">GO</div>
+		
+		    <div id="playerPanel">
+				<h2>Player</h2>
+				<img id="imgPlayer" src="images/question.png">
+				<br><br>
+				<div id="btnfire" class="iconButton" onclick="select('fire')">
+					<img src="images/fire.png">
+					<br>Fire
+				</div>
+				<div id="btnwater" class="iconButton" onclick="select('water')">
+					<img src="images/water.png">
+					<br>Water
+				</div>
+				<div id="btngrass" class="iconButton" onclick="select('grass')">
+					<img src="images/grass.png">
+					<br>Grass
+				</div>
+			</div>
+
+			<div id="computerPanel">
+				<h2>Computer</h2>
+				<img id="imgComputer" src="images/question.png">
+				<br><br>
+				<div id="lblfire" class="iconLabel">
+					<img src="images/fire.png">
+					<br>fire
+				</div>
+				<div id="lblwater" class="iconLabel">
+					<img src="images/water.png">
+					<br>water
+				</div>
+				<div id="lblgrass" class="iconLabel">
+					<img src="images/grass.png">
+					<br>grass
+				</div>
+			</div>
+
+			
+		</div>
+		
+		<footer>
+            <span class = "current">CST 336 &copy; 2018 Isaac Avila</span> <br />
+            
+            <br />
+            <strong> Disclaimer:</strong> The information in this website is fake. It is used for academic purposes only.
+            <br />
+            
+            <figure>
+                <img src = "images/buddy.png" width = '70'> 
+            </figure>
+        </footer>
+		
+	</body>
+</html>
+
