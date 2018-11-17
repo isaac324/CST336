@@ -15,6 +15,15 @@ var words = [{ word: "snake", hint: "It's a reptile" },
 // LISTENERS
 window.onload = startGame();
 
+$("#letters").on("click", ".letter", function(){
+    checkLetter($(this).attr("id"));
+    disableButton($(this));
+});
+
+$(".replayBtn").on("click", function(){
+    location.reload();
+});
+
 // FUNCTIONS
 function startGame(){
     pickWord();
@@ -64,6 +73,20 @@ function updateMan() {
     $("#hangImg").attr("src", "img/stick_" + (6 - remainingGuesses) + ".png");
 }
 
+//Update the current word then calls for a board update
+function updateWord(positions, letter) {
+    for(var pos of positions) {
+        board[pos] = letter;
+    }
+    
+    updateBoard();
+    
+    //Checks to see if user got winning guess
+    if(!board.includes('_')) {
+        endGame(true);
+    }
+}
+
 //Checks to see if the selected letter exists in the selectedWord
 function checkLetter(letter) {
     var positions = new Array();
@@ -78,28 +101,14 @@ function checkLetter(letter) {
     
     if(positions.length > 0) {
         updateWord(positions, letter);
-        
-        //checks to see if this is a winning guess
-        if(!board.includes('_')) {
-            endGame(true);
-        }
     } else {
         remainingGuesses--;
         updateMan();
+        
+        if(remainingGuesses <= 0){
+            endGame(false);
+        }
     }
-    
-    if(remainingGuesses <= 0){
-        endGame(false);
-    }
-}
-
-//Update the current word then calls for a board update
-function updateWord(positions, letter) {
-    for(var pos of positions) {
-        board[pos] = letter;
-    }
-    
-    updateBoard();
 }
 
 // initBoard();
@@ -129,14 +138,19 @@ function disableButton(btn) {
 //     console.log("You pressed the button and it had the value: " + boxVal);
 // });
 
-$(".letter").click(function(){
-   checkLetter($(this).attr("id"));
-   disableButton($(this));
-});
+// $(".letter").click(function(){
+//   checkLetter($(this).attr("id"));
+//   disableButton($(this));
+// });
 
-$(".replayBtn").on("click", function(){
-    location.reload();
-});
+// $("#letters").on("click", ".letter", function(){
+//     checkLetter($(this).attr("id"));
+//     disableButton($(this));
+// });
+
+// $(".replayBtn").on("click", function(){
+//     location.reload();
+// });
     
 //console.log(words[0]);
     
