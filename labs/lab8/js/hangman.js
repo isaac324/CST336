@@ -32,8 +32,6 @@ function startGame(){
     
     initBoard();
     updateBoard();
-    
-    //document.getElementById("hint").style.display = "inline";
 }
 
 function pickWord() {
@@ -77,7 +75,6 @@ function updateBoard() {
     
     $("#word").append("<br />");
     //$("#word").append("<span class='hint'> Hint: </span>");
-    //$("#word").append("<span class='hint'> <button id='hint' class='myButton' onclick='showHint()' >Get Hint </button> " + "</span>");
     //$("#word").append("<span class='hint'>" + emptyHint + "</span>");
     //$("#word").append("<span class='hint'> <button id='hintBtn' onclick='showHint()' >Get Hint</button> " + "</span>");
     
@@ -99,10 +96,6 @@ function updateWord(positions, letter) {
         endGame(true);
     }
 }
-
-// function updateMan() {
-//     $("#hangImg").attr("src", "img/stick_" + (6 - remainingGuesses) + ".png");
-// }
 
 //Checks to see if the selected letter exists in the selectedWord
 function checkLetter(letter) {
@@ -131,11 +124,6 @@ function updateMan() {
     $("#hangImg").attr("src", "img/stick_" + (6 - remainingGuesses) + ".png");
 }
 
-// initBoard();
-//     for(var letter of board) {
-//         document.getElementById("word").innerHTML += letter + " ";
-//     }
-
 //Ends the game by hiding game divs and displaying the win or loss divs
 function endGame(win) {
     document.getElementById("hintmessage").style.display = "none";
@@ -155,25 +143,4 @@ function disableButton(btn) {
     btn.attr("class", "btn btn-danger")
 }
 
-// uncomment out if I use the textbox method
-// $('#letterBtn').click(function(){
-//     var boxVal = $("#letterBox").val();
-//     console.log("You pressed the button and it had the value: " + boxVal);
-// });
-
-// $(".letter").click(function(){
-//   checkLetter($(this).attr("id"));
-//   disableButton($(this));
-// });
-
-// $("#letters").on("click", ".letter", function(){
-//     checkLetter($(this).attr("id"));
-//     disableButton($(this));
-// });
-
-// $(".replayBtn").on("click", function(){
-//     location.reload();
-// });
-    
-//console.log(words[0]);
     
