@@ -32,11 +32,13 @@ function startGame(){
     
     initBoard();
     updateBoard();
+    
+    //document.getElementById("hint").style.display = "inline";
 }
 
 function pickWord() {
     var randomInt = Math.floor(Math.random() * words.length);
-    selectedWord = words[randomInt].toUpperCase();
+    selectedWord = words[randomInt].word.toUpperCase();
     selectedHint = words[randomInt].hint;
 }
 
@@ -55,6 +57,17 @@ function initBoard() {
     }
 }
 
+//function to display hint
+function showHint() {
+    document.getElementById("hintmessage").style.display = "inline";
+    document.getElementById("hintmessage").innerHTML = "<i>" + selectedHint + "</i>";
+    document.getElementById("hintmessage").style.color = "navy";
+    document.getElementById("HintBtn").style.display = "none";
+    
+    remainingGuesses--;
+    updateMan();
+}
+
 function updateBoard() {
     $("#word").empty();
     
@@ -63,7 +76,10 @@ function updateBoard() {
     }
     
     $("#word").append("<br />");
-    $("#word").append("<span class='hint'>Hint: " + selectedHint + "</span>");
+    //$("#word").append("<span class='hint'> Hint: </span>");
+    //$("#word").append("<span class='hint'> <button id='hint' class='myButton' onclick='showHint()' >Get Hint </button> " + "</span>");
+    //$("#word").append("<span class='hint'>" + emptyHint + "</span>");
+    //$("#word").append("<span class='hint'> <button id='hintBtn' onclick='showHint()' >Get Hint</button> " + "</span>");
     
     // for(var letter of board) {
     //     document.getElementById("word").innerHTML += letter + " ";
@@ -94,7 +110,6 @@ function checkLetter(letter) {
     
     //Put all the positions the letter exists in an array
     for (var i = 0; i < selectedWord.length; i++) {
-        //console.log(selectedWord);
         if(letter == selectedWord[i]) {
             positions.push(i);
         }
@@ -123,6 +138,8 @@ function updateMan() {
 
 //Ends the game by hiding game divs and displaying the win or loss divs
 function endGame(win) {
+    document.getElementById("hintmessage").style.display = "none";
+    document.getElementById("HintBtn").style.display = "none";
     $("#letters").hide();
     
     if(win) {

@@ -11,19 +11,42 @@
         
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
+        <style>
+            body {
+                background-image: linear-gradient(to bottom right, aqua, skyblue, tan 85%);
+            }
+            h1, h4{
+                font-family: monospace;
+                color: navy;
+                font-size: 3.5em;
+            }
+            footer{
+                margin-top: 200px;
+                text-align: center;
+            }
+            #hintmessage{
+                display: none;
+            }
+            .Hbutton{
+                font-family: monospace;
+                background-color: gold;
+                border-color: gold;
+            }
+        </style>
+        
     </head>
     <body>
         <div class='container text-center'>
             <header>
                 <h1>Hangman</h1>
-                <h4>Javascript Edition</h4>
+                <!--<h4>Javascript Edition</h4>-->
             </header>
             
             <div id="word"></div>
-            <div id="letters">
-                <!--<input type="text" id="letterBox">-->
-                <!--<button id="letterBtn">Submit</button>-->
-            </div>
+            <div id="letters"></div>
+            
+            <h3 id="hintmessage"> Hint: </h3>
+            <button class="Hbutton" id="HintBtn" onclick="showHint()"> Get Hint </button>
             
             <div id ="won">
                 <h2>You Won!</h2>
@@ -40,5 +63,17 @@
         </div>
         
         <script src="js/hangman.js"></script>
+        
+        <footer>
+            <span class = "current">CST 336 &copy; 2018 Isaac Avila</span> <br />
+            
+            <br />
+            <strong> Disclaimer:</strong> The information in this website is fake. It is used for academic purposes only.
+            <br />
+            
+            <figure>
+                <img src = "img/buddy.png" width = '70'> 
+            </figure>
+        </footer>
     </body>
 </html>
