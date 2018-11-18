@@ -8,6 +8,7 @@ var selectedWord = "";
 var selectedHint = "";
 var board = []; 
 var remainingGuesses = 6;
+
 var words = [{ word: "snake", hint: "It's a reptile" },
              { word: "monkey", hint: "It's a mammal" },
              { word: "beetle", hint: "It's an insect" }];
@@ -33,6 +34,12 @@ function startGame(){
     updateBoard();
 }
 
+function pickWord() {
+    var randomInt = Math.floor(Math.random() * words.length);
+    selectedWord = words[randomInt].toUpperCase();
+    selectedHint = words[randomInt].hint;
+}
+
 //Creating the letters inside the letters div
 function createLetters() {
     for(var letter of alphabet) {
@@ -46,12 +53,6 @@ function initBoard() {
     for(var letter in selectedWord) {
         board.push("_");
     }
-}
-
-function pickWord() {
-    var randomInt = Math.floor(Math.random() * words.length);
-    selectedWord = words[randomInt].toUpperCase();
-    selectedHint = words[randomInt].hint;
 }
 
 function updateBoard() {
@@ -69,23 +70,23 @@ function updateBoard() {
     // }
 }
 
-function updateMan() {
-    $("#hangImg").attr("src", "img/stick_" + (6 - remainingGuesses) + ".png");
-}
-
 //Update the current word then calls for a board update
 function updateWord(positions, letter) {
     for(var pos of positions) {
         board[pos] = letter;
     }
     
-    updateBoard();
+    updateBoard(board);
     
     //Checks to see if user got winning guess
     if(!board.includes('_')) {
         endGame(true);
     }
 }
+
+// function updateMan() {
+//     $("#hangImg").attr("src", "img/stick_" + (6 - remainingGuesses) + ".png");
+// }
 
 //Checks to see if the selected letter exists in the selectedWord
 function checkLetter(letter) {
@@ -111,6 +112,10 @@ function checkLetter(letter) {
     }
 }
 
+function updateMan() {
+    $("#hangImg").attr("src", "img/stick_" + (6 - remainingGuesses) + ".png");
+}
+
 // initBoard();
 //     for(var letter of board) {
 //         document.getElementById("word").innerHTML += letter + " ";
@@ -122,7 +127,7 @@ function endGame(win) {
     
     if(win) {
         $('#won').show();
-    } else {
+    }else {
         $('#lost').show();
     }
 }
@@ -133,6 +138,7 @@ function disableButton(btn) {
     btn.attr("class", "btn btn-danger")
 }
 
+// uncomment out if I use the textbox method
 // $('#letterBtn').click(function(){
 //     var boxVal = $("#letterBox").val();
 //     console.log("You pressed the button and it had the value: " + boxVal);
