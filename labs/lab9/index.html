@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>AJAX: Sign Up Page</title>
-
+        
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
         <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
         <script>
         
@@ -12,18 +13,35 @@
                 var username = $("#username").val();
                 var password = $("#password").val();
                 var passwordAgain = $("#passwordAgain").val();
+                var zip = $("#zip").val();
+                
+                if(!zip) {
+                    $("#zipError").html("Error: Zip code not found");
+                } else {
+                    $("#zipError").html("");
+                }
                 
                 if(username.length < 5) {
-                    
+                    $("#validusername").html("");
                     $("#usernameError").html("Error: Username must be at least 5 character long");
-                    
-                }
-                if(password.length < 3){
-                    $("#passwordError").html("Error: Password not long enough, needs to be 3 characters long");
                 }
                 
-                if(password != passwordAgain){
+                if(password.length < 3) {
+                    $("#validpassword").html("");
+                    $("#passwordError").html("Error: Password not long enough, needs to be 3 characters long");
+                } else {
+                    $("#passwordError").html("");
+                }
+                
+                if(password != passwordAgain) {
+                    $("#validpassword").html("");
                     $("#passwordMismatch").html("Error: Passwords must match");
+                } else {
+                    $("#passwordMismatch").html("");
+                }
+                
+                if(password.length >= 3 && passwordAgain == password) {
+                    $("#validpassword").html("Valid Password");
                 }
                 
                 return false;
@@ -39,11 +57,17 @@
                         type: "GET",
                         url: "http://itcdland.csumb.edu/~milara/ajax/cityInfoByZip.php",
                         dataType: "json",
-                        data: { "zip": $("#zip").val() },
+                        data: { 
+                            "zip": $("#zip").val(),
+                            "longitude":$("#longitude").val(),
+                            "latitude" :$("#latitude").val()
+                        },
                         success: function(data,status) {
                            
                            //alert(data.city);
                            $("#city").html(data.city);
+                           $("#longitude").html(data.longitude);
+                           $("#latitude").html(data.latitude);
                            
                         
                         },
@@ -54,6 +78,33 @@
                     });//ajax
                     
                 }); //zipEvent
+                
+                $("#username").change(function() {
+                    var username = $("#username").val();
+                   //alert(username);
+                   $.ajax({
+                       
+                       type: "GET",
+                        url: "checkuser.php",
+                        dataType: "json",
+                        data: { "username": username },
+                        success: function(data, status) {
+                            
+                            if(!data) {
+                                $("#usernameError").html("");
+                                $("#validusername").html("username is available");
+                            } else {
+                                $("#validusername").html("");
+                                $("#usernameError").html("username is not available");
+                            }
+                        
+                        },
+                        complete: function(data, status) { //optional, used for debugging purposes
+                            //alert(status);
+                        }
+                        
+                    });//ajax
+                });
                 
                 $("#state").change(function(){
                     $.ajax({
@@ -83,12 +134,6 @@
             
             
         </script>
-        
-        <style>
-            .error{
-                color: red;
-            }
-        </style>
 
     </head>
 
@@ -103,12 +148,12 @@
                 Last Name:   <input type="text"><br> 
                 Email:       <input type="text"><br> 
                 Phone Number:<input type="text"><br><br>
-                Zip Code:    <input type="text" id="zip"><br>
+                Zip Code:    <input type="text" id="zip"><span id="zipError" class="error" ></span><br>
                 City:   <span id="city"></span>
                 <br>
-                Latitude: 
+                Latitude: <span id="latitude"></span>
                 <br>
-                Longitude:
+                Longitude: <span id="longitude"></span>
                 <br><br>
                 State: 
                 <select id="state">
@@ -121,12 +166,13 @@
                 
                 Select a County: <select id="county"></select><br>
                 
-                Desired Username: <input id="username" type="text"> <span id="usernameError" class="error" ></span>
+                Desired Username: <input id="username" type="text"> <span id="usernameError" class="error" ></span><span id="validusername" class="valid"></span>
                 <br>
                 
-                Password: <input id="password" type="password"><span id="passwordError" class="error"></span><br>
+                Password: <input id="password" type="password"><span id="passwordError" class="error"></span><span id="validpassword" class="valid"></span>
+                <br>
                 
-                Type Password Again: <input id="passwordAgain" type="password"><span id="passwordMismatch" class="error"></span><br>
+                Type Password Again: <input id="passwordAgain" type="password"><span id="passwordMismatch" class="error"></span><br><br>
                 
                 <input type="submit" value="Sign up!">
             </fieldset>

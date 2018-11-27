@@ -1,0 +1,36 @@
+h1{
+    color: yellow;
+}
+
+body{
+    background-color: navy;
+    background-image: linear-gradient(to bottom right, navy, black 85%);
+    color: white;
+}
+
+fieldset{
+    border-color: yellow;
+    background-color: black;
+    /*background-image: linear-gradient(to bottom right, black, grey);*/
+    /*background-image: linear-gradient(to bottom right, darkgrey, black);*/
+}
+
+input{
+    margin: 3.5px;
+    background-color: silver;
+}
+
+input[type=submit]:hover{
+    background-color: yellow;
+    border-color: yellow;
+}
+
+.error{
+    filter:contrast(200%);
+    color: red;
+}
+
+.valid{
+    filter: contrast(200%);
+    color: green;
+}
