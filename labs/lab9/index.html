@@ -17,13 +17,9 @@
                 
                 if(!zip) {
                     $("#zipError").html("Error: Zip code not found");
-                } else {
-                    $("#zipError").html("");
-                }
-                
-                if(username.length < 5) {
-                    $("#validusername").html("");
-                    $("#usernameError").html("Error: Username must be at least 5 character long");
+                    $("#city").html("");
+                    $("#longitude").html("");
+                    $("#latitude").html("");
                 }
                 
                 if(password.length < 3) {
@@ -35,7 +31,7 @@
                 
                 if(password != passwordAgain) {
                     $("#validpassword").html("");
-                    $("#passwordMismatch").html("Error: Passwords must match");
+                    $("#passwordMismatch").html("Error: Retype Password");
                 } else {
                     $("#passwordMismatch").html("");
                 }
@@ -63,11 +59,17 @@
                             "latitude" :$("#latitude").val()
                         },
                         success: function(data,status) {
-                           
-                           //alert(data.city);
-                           $("#city").html(data.city);
-                           $("#longitude").html(data.longitude);
-                           $("#latitude").html(data.latitude);
+                            if(!data){
+                                $("#zipError").html("Error: Zip code not found");
+                                $("#city").html("");
+                                $("#longitude").html("");
+                                $("#latitude").html("");
+                            }else{
+                                $("#zipError").html("");
+                                $("#city").html(data.city);
+                                $("#longitude").html(data.longitude);
+                                $("#latitude").html(data.latitude);
+                            }
                            
                         
                         },
@@ -90,9 +92,12 @@
                         data: { "username": username },
                         success: function(data, status) {
                             
-                            if(!data) {
+                            if(!data && username.length >= 5) {
                                 $("#usernameError").html("");
                                 $("#validusername").html("username is available");
+                            } else if(!data && username.length < 5) {
+                                $("#validusername").html("");
+                                $("#usernameError").html("Error: Username must be at least 5 character long");
                             } else {
                                 $("#validusername").html("");
                                 $("#usernameError").html("username is not available");
@@ -177,6 +182,18 @@
                 <input type="submit" value="Sign up!">
             </fieldset>
         </form>
+        
+        <footer>
+            <span class = "current">CST 336 &copy; 2018 Isaac Avila</span> <br />
+            
+            <br />
+            <strong> Disclaimer:</strong> The information in this website is fake. It is used for academic purposes only.
+            <br />
+            
+            <figure>
+                <img src = "img/buddy.png" width = '70'> 
+            </figure>
+        </footer>
     
     </body>
 </html>

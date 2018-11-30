@@ -1,23 +1,28 @@
 h1{
+    font-size: 3.2em;
     color: yellow;
+    font-family: serif;
 }
 
 body{
     background-color: navy;
     background-image: linear-gradient(to bottom right, navy, black 85%);
     color: white;
+    font-size: 1.3em;
 }
 
 fieldset{
     border-color: yellow;
     background-color: black;
-    /*background-image: linear-gradient(to bottom right, black, grey);*/
-    /*background-image: linear-gradient(to bottom right, darkgrey, black);*/
 }
 
 input{
     margin: 3.5px;
     background-color: silver;
+}
+
+input[type=submit]{
+    font-size:1.5em;
 }
 
 input[type=submit]:hover{
@@ -33,4 +38,9 @@ input[type=submit]:hover{
 .valid{
     filter: contrast(200%);
     color: green;
+}
+
+footer{
+    text-align: center;
+    margin-top: 200px;
 }
