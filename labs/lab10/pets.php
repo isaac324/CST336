@@ -52,6 +52,8 @@ function getAllPets(){
                     data: { "petid": $(this).attr('id') },
                     success: function(data, status) {
                         $("#petname").html(data.name);
+                        $("#breed").html(data.breed);
+                        $("#age").html(2018 - data.yob) ;
                         $("#description").html(data.description);
                         $("#petImage").attr('src', "img/" + data.pictureURL);
                         $("#container").html("");
@@ -91,8 +93,10 @@ function getAllPets(){
           <div id="container"></div>
         <div>
 	      
-	      <img id = "petImage" src="">
-	      <div id="description">Description: </div>
+	      <img id = "petImage" src=""><br><br>
+	      Breed: <span id="breed"> </span> <br> <br>
+        Age: <span id="age"> </span> years  </span> <br> <br>
+	      Bio: <span id="description">
 	      
 	      </div>
       </div>
