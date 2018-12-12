@@ -1,0 +1,129 @@
+[11-Dec-2018 03:37:50 UTC] PHP Fatal error:  Call to undefined function filterGames() in /home/ubuntu/workspace/cst336/final_project/index.php on line 108
+[11-Dec-2018 03:37:50 UTC] PHP Stack trace:
+[11-Dec-2018 03:37:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/index.php:0
+[11-Dec-2018 03:54:29 UTC] PHP Fatal error:  Call to undefined function displayCart() in /home/ubuntu/workspace/cst336/final_project/scart.php on line 119
+[11-Dec-2018 03:54:29 UTC] PHP Stack trace:
+[11-Dec-2018 03:54:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/scart.php:0
+[11-Dec-2018 21:02:20 UTC] PHP Fatal error:  Call to undefined function displayCart() in /home/ubuntu/workspace/cst336/final_project/scart.php on line 119
+[11-Dec-2018 21:02:20 UTC] PHP Stack trace:
+[11-Dec-2018 21:02:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/scart.php:0
+[11-Dec-2018 21:40:54 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'actors' in 'where clause'' in /home/ubuntu/workspace/cst336/final_project/inc/functions.php:99
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/final_project/inc/functions.php(99): PDOStatement->execute(Array)
+#1 /home/ubuntu/workspace/cst336/final_project/index.php(114): filterGames()
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336/final_project/inc/functions.php on line 99
+[12-Dec-2018 01:11:13 UTC] PHP Fatal error:  Call to undefined function displayProductInfo() in /home/ubuntu/workspace/cst336/final_project/gameInfo.php on line 99
+[12-Dec-2018 01:11:13 UTC] PHP Stack trace:
+[12-Dec-2018 01:11:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/gameInfo.php:0
+[12-Dec-2018 01:48:02 UTC] PHP Fatal error:  Call to undefined function check() in /home/ubuntu/workspace/cst336/final_project/login.php on line 35
+[12-Dec-2018 01:48:02 UTC] PHP Stack trace:
+[12-Dec-2018 01:48:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/login.php:0
+[12-Dec-2018 01:49:55 UTC] PHP Warning:  include(../../inc/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/final_project/login.php on line 5
+[12-Dec-2018 01:49:55 UTC] PHP Stack trace:
+[12-Dec-2018 01:49:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/login.php:0
+[12-Dec-2018 01:49:55 UTC] PHP Warning:  include(): Failed opening '../../inc/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/final_project/login.php on line 5
+[12-Dec-2018 01:49:55 UTC] PHP Stack trace:
+[12-Dec-2018 01:49:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/login.php:0
+[12-Dec-2018 01:49:55 UTC] PHP Fatal error:  Call to undefined function startConnection() in /home/ubuntu/workspace/cst336/final_project/login.php on line 6
+[12-Dec-2018 01:49:55 UTC] PHP Stack trace:
+[12-Dec-2018 01:49:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/login.php:0
+[12-Dec-2018 03:36:46 UTC] PHP Fatal error:  Call to undefined function displayCartCount() in /home/ubuntu/workspace/cst336/final_project/login.php on line 99
+[12-Dec-2018 03:36:46 UTC] PHP Stack trace:
+[12-Dec-2018 03:36:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/login.php:0
+[12-Dec-2018 03:38:17 UTC] PHP Fatal error:  Call to undefined function displayCart() in /home/ubuntu/workspace/cst336/final_project/scart.php on line 119
+[12-Dec-2018 03:38:17 UTC] PHP Stack trace:
+[12-Dec-2018 03:38:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/scart.php:0
+[12-Dec-2018 03:38:19 UTC] PHP Fatal error:  Call to undefined function displayCart() in /home/ubuntu/workspace/cst336/final_project/scart.php on line 119
+[12-Dec-2018 03:38:19 UTC] PHP Stack trace:
+[12-Dec-2018 03:38:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/scart.php:0
+[12-Dec-2018 03:38:20 UTC] PHP Fatal error:  Call to undefined function displayCartCount() in /home/ubuntu/workspace/cst336/final_project/login.php on line 101
+[12-Dec-2018 03:38:20 UTC] PHP Stack trace:
+[12-Dec-2018 03:38:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/login.php:0
+[12-Dec-2018 03:38:58 UTC] PHP Fatal error:  Call to undefined function displayCart() in /home/ubuntu/workspace/cst336/final_project/scart.php on line 119
+[12-Dec-2018 03:38:58 UTC] PHP Stack trace:
+[12-Dec-2018 03:38:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/scart.php:0
+[12-Dec-2018 03:39:00 UTC] PHP Fatal error:  Call to undefined function displayCart() in /home/ubuntu/workspace/cst336/final_project/scart.php on line 119
+[12-Dec-2018 03:39:00 UTC] PHP Stack trace:
+[12-Dec-2018 03:39:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/scart.php:0
+[12-Dec-2018 03:39:38 UTC] PHP Fatal error:  Call to undefined function displayCart() in /home/ubuntu/workspace/cst336/final_project/scart.php on line 119
+[12-Dec-2018 03:39:38 UTC] PHP Stack trace:
+[12-Dec-2018 03:39:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/scart.php:0
+[12-Dec-2018 03:40:39 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php:3) in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php on line 3
+[12-Dec-2018 03:40:39 UTC] PHP Stack trace:
+[12-Dec-2018 03:40:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/login.php:0
+[12-Dec-2018 03:42:04 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php:3) in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php on line 3
+[12-Dec-2018 03:42:04 UTC] PHP Stack trace:
+[12-Dec-2018 03:42:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/login.php:0
+[12-Dec-2018 05:18:16 UTC] PHP Fatal error:  Call to undefined function displayCart() in /home/ubuntu/workspace/cst336/final_project/scart.php on line 119
+[12-Dec-2018 05:18:16 UTC] PHP Stack trace:
+[12-Dec-2018 05:18:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/scart.php:0
+[12-Dec-2018 06:13:27 UTC] PHP Fatal error:  Call to undefined function displayProductInfo() in /home/ubuntu/workspace/cst336/final_project/gameInfo.php on line 99
+[12-Dec-2018 06:13:27 UTC] PHP Stack trace:
+[12-Dec-2018 06:13:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/gameInfo.php:0
+[12-Dec-2018 06:31:47 UTC] PHP Fatal error:  Call to undefined function addRemove() in /home/ubuntu/workspace/cst336/final_project/scart.php on line 120
+[12-Dec-2018 06:31:47 UTC] PHP Stack trace:
+[12-Dec-2018 06:31:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/scart.php:0
+[12-Dec-2018 06:43:17 UTC] PHP Fatal error:  Call to undefined function displayProductInfo() in /home/ubuntu/workspace/cst336/final_project/gameInfo.php on line 99
+[12-Dec-2018 06:43:17 UTC] PHP Stack trace:
+[12-Dec-2018 06:43:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/gameInfo.php:0
+[12-Dec-2018 10:15:25 UTC] PHP Warning:  include(../../inc/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/final_project/admin.php on line 6
+[12-Dec-2018 10:15:25 UTC] PHP Stack trace:
+[12-Dec-2018 10:15:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/admin.php:0
+[12-Dec-2018 10:15:25 UTC] PHP Warning:  include(): Failed opening '../../inc/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/final_project/admin.php on line 6
+[12-Dec-2018 10:15:25 UTC] PHP Stack trace:
+[12-Dec-2018 10:15:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/admin.php:0
+[12-Dec-2018 10:15:25 UTC] PHP Fatal error:  Call to undefined function startConnection() in /home/ubuntu/workspace/cst336/final_project/admin.php on line 7
+[12-Dec-2018 10:15:25 UTC] PHP Stack trace:
+[12-Dec-2018 10:15:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/admin.php:0
+[12-Dec-2018 10:15:42 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php:3) in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php on line 3
+[12-Dec-2018 10:15:42 UTC] PHP Stack trace:
+[12-Dec-2018 10:15:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/admin.php:0
+[12-Dec-2018 10:15:42 UTC] PHP   2. include() /home/ubuntu/workspace/cst336/final_project/admin.php:9
+[12-Dec-2018 10:16:19 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php:3) in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php on line 3
+[12-Dec-2018 10:16:19 UTC] PHP Stack trace:
+[12-Dec-2018 10:16:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/admin.php:0
+[12-Dec-2018 10:16:19 UTC] PHP   2. include() /home/ubuntu/workspace/cst336/final_project/admin.php:9
+[12-Dec-2018 10:16:20 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php:3) in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php on line 3
+[12-Dec-2018 10:16:20 UTC] PHP Stack trace:
+[12-Dec-2018 10:16:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/admin.php:0
+[12-Dec-2018 10:16:20 UTC] PHP   2. include() /home/ubuntu/workspace/cst336/final_project/admin.php:9
+[12-Dec-2018 10:16:21 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php:3) in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php on line 3
+[12-Dec-2018 10:16:21 UTC] PHP Stack trace:
+[12-Dec-2018 10:16:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/admin.php:0
+[12-Dec-2018 10:16:21 UTC] PHP   2. include() /home/ubuntu/workspace/cst336/final_project/admin.php:9
+[12-Dec-2018 10:16:22 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php:3) in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php on line 3
+[12-Dec-2018 10:16:22 UTC] PHP Stack trace:
+[12-Dec-2018 10:16:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/admin.php:0
+[12-Dec-2018 10:16:22 UTC] PHP   2. include() /home/ubuntu/workspace/cst336/final_project/admin.php:9
+[12-Dec-2018 10:16:23 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php:3) in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php on line 3
+[12-Dec-2018 10:16:23 UTC] PHP Stack trace:
+[12-Dec-2018 10:16:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/admin.php:0
+[12-Dec-2018 10:16:23 UTC] PHP   2. include() /home/ubuntu/workspace/cst336/final_project/admin.php:9
+[12-Dec-2018 10:18:38 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php:3) in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php on line 3
+[12-Dec-2018 10:18:38 UTC] PHP Stack trace:
+[12-Dec-2018 10:18:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/admin.php:0
+[12-Dec-2018 10:18:38 UTC] PHP   2. include() /home/ubuntu/workspace/cst336/final_project/admin.php:9
+[12-Dec-2018 10:20:35 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php:3) in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php on line 3
+[12-Dec-2018 10:20:35 UTC] PHP Stack trace:
+[12-Dec-2018 10:20:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/admin.php:0
+[12-Dec-2018 10:20:35 UTC] PHP   2. include() /home/ubuntu/workspace/cst336/final_project/admin.php:9
+[12-Dec-2018 10:20:36 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php:3) in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php on line 3
+[12-Dec-2018 10:20:36 UTC] PHP Stack trace:
+[12-Dec-2018 10:20:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/admin.php:0
+[12-Dec-2018 10:20:36 UTC] PHP   2. include() /home/ubuntu/workspace/cst336/final_project/admin.php:9
+[12-Dec-2018 10:20:37 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php:3) in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php on line 3
+[12-Dec-2018 10:20:37 UTC] PHP Stack trace:
+[12-Dec-2018 10:20:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/admin.php:0
+[12-Dec-2018 10:20:37 UTC] PHP   2. include() /home/ubuntu/workspace/cst336/final_project/admin.php:9
+[12-Dec-2018 10:23:52 UTC] PHP Fatal error:  Call to undefined function displayProductInfo() in /home/ubuntu/workspace/cst336/final_project/gameInfo.php on line 99
+[12-Dec-2018 10:23:52 UTC] PHP Stack trace:
+[12-Dec-2018 10:23:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/gameInfo.php:0
+[12-Dec-2018 10:40:22 UTC] PHP Fatal error:  Call to undefined function displayProductInfo() in /home/ubuntu/workspace/cst336/final_project/gameInfo.php on line 99
+[12-Dec-2018 10:40:22 UTC] PHP Stack trace:
+[12-Dec-2018 10:40:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/gameInfo.php:0
+[12-Dec-2018 12:02:10 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/ubuntu/workspace/cst336/final_project/getgameInfo.php:7
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/final_project/getgameInfo.php(7): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/final_project/getgameInfo.php on line 7
