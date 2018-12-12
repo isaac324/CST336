@@ -87,7 +87,7 @@ include 'inc/functions.php';
         <hr>
         
         <form action="addGame.php">
-            <input type="submit" value="Add New Product">
+            <input type="submit" value="Add New Game">
         </form>
         <form action="index.php">
             <input type="submit" value="Logout">
