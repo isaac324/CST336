@@ -162,7 +162,7 @@ include 'inc/functions.php';
 	    Category: <span id="type"> </span> <br><br>
         Console: <span id="console"> </span> <br><br>
         Year: <span id="year"> </span> <br><br>
-        Price: <span id="price"></span>
+        Price: $<span id="price"></span>
 	      
 	      </div>
       </div>
