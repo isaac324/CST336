@@ -5,62 +5,6 @@ session_start();
 include 'inc/functions.php';
 //$dbConn = startConnection("project");
 
-// function displayProductInfo(){
-//     global $dbConn;
-    
-    
-//     $movId = $_GET['movId'];
-//     $sql = "SELECT *
-//             FROM proj_movies
-//             WHERE movId = $movId";
-//     //NATURAL RIGHT JOIN om_product
-    
-//     //$np = array();
-//     //$np[$movId] = $movId;
-    
-//     $stmt = $dbConn->prepare($sql);
-//     $stmt->execute();
-//     $records = $stmt->fetchAll(PDO::FETCH_ASSOC); //fetchAll returns an Array of Arrays
-    
-//     //echo $records[0]['productName'] . "<br>";
-//     echo "<img src='" . $records[0]['image'] . "'  width='150'/><br>";
-    
-//     foreach ($records as $record) {
-//         echo "<strong>Title</strong>";
-//         echo "<br>";
-//         echo $record[title];
-//         echo "<br><br>";
-//         echo "<strong>Year:</strong> ";
-//         echo $record[year]; 
-//         echo "<br><br>";
-//         echo "<strong>Directed by:</strong>"; 
-//         echo "<br>";
-//         echo $record[director]; 
-//         echo "<br><br>";
-//         echo "<strong>Starring:</strong>"; 
-//         echo "<br>";
-//         echo $record[actors]; 
-//         echo "<br><br>";
-//     }
-    
-//     // echo "<table>";
-//     // echo "<tr>";
-//     // echo "<th>Title </th><th>Year </th><th>Actors</th>";
-        
-//     // foreach ($records as $record) {
-//     //     echo "<tr>";    
-//     //     echo "<td>" . $record[title] . "</td>";
-//     //     echo "<td>" . $record[year] . "</td>";
-//     //     echo "<td>" . $record[actors] . "</td>";
-//     //     echo "</tr>";
-//     // }
-//     // echo "</table>";
-    
-    
-//     //print_r($records);
-// }
-
-
 ?>
 
 
@@ -73,6 +17,28 @@ include 'inc/functions.php';
         
         
         <title> Game Info </title>
+        <style>
+            footer {
+                text-align: center;
+                padding: 10px;
+                margin-top: 250px;
+            }
+            .home{
+                color: navy;
+            }
+            .home:hover{
+                color: blue;
+            }
+            .admin{
+                color: darkred;
+            }
+            .admin:hover{
+                color: red;
+            }
+            body{
+                background-color: Lightgrey;
+            }
+        </style>
     </head>
     <body>
         
@@ -83,7 +49,8 @@ include 'inc/functions.php';
                     <a class='navbar-brand' href='#'>GameCart</a>
                 </div>
                   <ul class='nav navbar-nav'>
-                    <li><a href='index.php'>Home</a></li>
+                    <li><a href='index.php'><span class='home'>Home</span></a></li>
+                    <li><a href='login.php'><span class='admin'>Admin</span></a></li>
                     <li><a href='scart.php'>
                     <span class ='glyphicon glyphicon-shopping-cart' aria-hidden ='true'></span>
                     </span>Cart: <?php displayCartCount(); ?></a></li>
@@ -96,7 +63,7 @@ include 'inc/functions.php';
             <div class='text-center'>
                 <h2>Game Info</h2>
                 
-                <?=displayProductInfo()?>
+                <?=displayGameInfo()?>
             </div>
         </div>
         

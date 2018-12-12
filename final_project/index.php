@@ -14,9 +14,7 @@
         $newItem = array();
         $newItem['name'] = $_POST['itemName'];
         $newItem['year'] = $_POST['itemYear'];
-        $newItem['director'] = $_POST['itemDirector'];
-        $newItem['actors'] = $_POST['itemActors'];
-        $newItem['rating'] = $_POST['itemRating'];
+        $newItem['price'] = $_POST['itemPrice'];
         $newItem['image'] = $_POST['itemImage'];
         $newItem['id'] = $_POST['itemId'];
         
@@ -55,6 +53,12 @@
                 padding: 10px;
                 margin-top: 250px;
             }
+            .home{
+                color: navy;
+            }
+            .home:hover{
+                color: blue;
+            }
             .admin{
                 color: darkred;
             }
@@ -75,7 +79,7 @@
                     <a class='navbar-brand' href='#'>GameCart</a>
                 </div>
                   <ul class='nav navbar-nav'>
-                    <li><a href='index.php'>Home</a></li>
+                    <li><a href='index.php'><span class='home'>Home</span></a></li>
                     <li><a href='login.php'><span class='admin'>Admin</span></a></li>
                     <li><a href='scart.php'>
                     <span class ='glyphicon glyphicon-shopping-cart' aria-hidden ='true'></span>

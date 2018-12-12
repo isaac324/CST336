@@ -161,3 +161,121 @@ Stack trace:
 [12-Dec-2018 13:48:13 UTC] PHP Fatal error:  Call to undefined function deleteGames() in /home/ubuntu/workspace/cst336/final_project/deleteGame.php on line 2
 [12-Dec-2018 13:48:13 UTC] PHP Stack trace:
 [12-Dec-2018 13:48:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/deleteGame.php:0
+[12-Dec-2018 14:58:13 UTC] PHP Warning:  Illegal string offset 'gameId' in /home/ubuntu/workspace/cst336/final_project/updateGame.php on line 64
+[12-Dec-2018 14:58:13 UTC] PHP Stack trace:
+[12-Dec-2018 14:58:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/updateGame.php:0
+[12-Dec-2018 14:58:13 UTC] PHP Warning:  Illegal string offset 'title' in /home/ubuntu/workspace/cst336/final_project/updateGame.php on line 65
+[12-Dec-2018 14:58:13 UTC] PHP Stack trace:
+[12-Dec-2018 14:58:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/updateGame.php:0
+[12-Dec-2018 14:58:13 UTC] PHP Warning:  Illegal string offset 'price' in /home/ubuntu/workspace/cst336/final_project/updateGame.php on line 66
+[12-Dec-2018 14:58:13 UTC] PHP Stack trace:
+[12-Dec-2018 14:58:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/updateGame.php:0
+[12-Dec-2018 14:58:13 UTC] PHP Warning:  Illegal string offset 'gameImage' in /home/ubuntu/workspace/cst336/final_project/updateGame.php on line 84
+[12-Dec-2018 14:58:13 UTC] PHP Stack trace:
+[12-Dec-2018 14:58:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/updateGame.php:0
+[12-Dec-2018 15:08:01 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'gametId' in 'where clause'' in /home/ubuntu/workspace/cst336/final_project/inc/functions.php:456
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/final_project/inc/functions.php(456): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336/final_project/inc/functions.php(445): getGameInfo('1')
+#2 /home/ubuntu/workspace/cst336/final_project/updateGame.php(88): updateGames()
+#3 {main}
+  thrown in /home/ubuntu/workspace/cst336/final_project/inc/functions.php on line 456
+[12-Dec-2018 15:09:08 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'gametId' in 'where clause'' in /home/ubuntu/workspace/cst336/final_project/inc/functions.php:456
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/final_project/inc/functions.php(456): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336/final_project/updateGame.php(51): getGameInfo('1')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336/final_project/inc/functions.php on line 456
+[12-Dec-2018 15:11:55 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'gametId' in 'where clause'' in /home/ubuntu/workspace/cst336/final_project/inc/functions.php:456
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/final_project/inc/functions.php(456): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336/final_project/updateGame.php(54): getGameInfo('1')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336/final_project/inc/functions.php on line 456
+[12-Dec-2018 15:11:56 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'gametId' in 'where clause'' in /home/ubuntu/workspace/cst336/final_project/inc/functions.php:456
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/final_project/inc/functions.php(456): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336/final_project/updateGame.php(54): getGameInfo('1')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336/final_project/inc/functions.php on line 456
+[12-Dec-2018 15:27:31 UTC] PHP Warning:  include(../../inc/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/final_project/updateGame.php on line 5
+[12-Dec-2018 15:27:31 UTC] PHP Stack trace:
+[12-Dec-2018 15:27:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/updateGame.php:0
+[12-Dec-2018 15:27:31 UTC] PHP Warning:  include(): Failed opening '../../inc/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/final_project/updateGame.php on line 5
+[12-Dec-2018 15:27:31 UTC] PHP Stack trace:
+[12-Dec-2018 15:27:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/updateGame.php:0
+[12-Dec-2018 15:27:31 UTC] PHP Fatal error:  Call to undefined function startConnection() in /home/ubuntu/workspace/cst336/final_project/updateGame.php on line 6
+[12-Dec-2018 15:27:31 UTC] PHP Stack trace:
+[12-Dec-2018 15:27:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/updateGame.php:0
+[12-Dec-2018 15:27:35 UTC] PHP Warning:  include(../../inc/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/final_project/updateGame.php on line 5
+[12-Dec-2018 15:27:35 UTC] PHP Stack trace:
+[12-Dec-2018 15:27:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/updateGame.php:0
+[12-Dec-2018 15:27:35 UTC] PHP Warning:  include(): Failed opening '../../inc/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/final_project/updateGame.php on line 5
+[12-Dec-2018 15:27:35 UTC] PHP Stack trace:
+[12-Dec-2018 15:27:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/updateGame.php:0
+[12-Dec-2018 15:27:35 UTC] PHP Fatal error:  Call to undefined function startConnection() in /home/ubuntu/workspace/cst336/final_project/updateGame.php on line 6
+[12-Dec-2018 15:27:35 UTC] PHP Stack trace:
+[12-Dec-2018 15:27:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/updateGame.php:0
+[12-Dec-2018 15:27:36 UTC] PHP Warning:  include(../../inc/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/final_project/updateGame.php on line 5
+[12-Dec-2018 15:27:36 UTC] PHP Stack trace:
+[12-Dec-2018 15:27:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/updateGame.php:0
+[12-Dec-2018 15:27:36 UTC] PHP Warning:  include(): Failed opening '../../inc/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/final_project/updateGame.php on line 5
+[12-Dec-2018 15:27:36 UTC] PHP Stack trace:
+[12-Dec-2018 15:27:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/updateGame.php:0
+[12-Dec-2018 15:27:36 UTC] PHP Fatal error:  Call to undefined function startConnection() in /home/ubuntu/workspace/cst336/final_project/updateGame.php on line 6
+[12-Dec-2018 15:27:36 UTC] PHP Stack trace:
+[12-Dec-2018 15:27:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/updateGame.php:0
+[12-Dec-2018 15:27:39 UTC] PHP Warning:  include(../../inc/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/final_project/updateGame.php on line 5
+[12-Dec-2018 15:27:39 UTC] PHP Stack trace:
+[12-Dec-2018 15:27:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/updateGame.php:0
+[12-Dec-2018 15:27:39 UTC] PHP Warning:  include(): Failed opening '../../inc/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/final_project/updateGame.php on line 5
+[12-Dec-2018 15:27:39 UTC] PHP Stack trace:
+[12-Dec-2018 15:27:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/updateGame.php:0
+[12-Dec-2018 15:27:39 UTC] PHP Fatal error:  Call to undefined function startConnection() in /home/ubuntu/workspace/cst336/final_project/updateGame.php on line 6
+[12-Dec-2018 15:27:39 UTC] PHP Stack trace:
+[12-Dec-2018 15:27:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/updateGame.php:0
+[12-Dec-2018 15:34:56 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'gametId' in 'where clause'' in /home/ubuntu/workspace/cst336/final_project/inc/functions.php:459
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/final_project/inc/functions.php(459): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336/final_project/inc/functions.php(405): getGameInfo('1')
+#2 /home/ubuntu/workspace/cst336/final_project/updateGame.php(73): updateGames()
+#3 {main}
+  thrown in /home/ubuntu/workspace/cst336/final_project/inc/functions.php on line 459
+[12-Dec-2018 15:35:28 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'gametId' in 'where clause'' in /home/ubuntu/workspace/cst336/final_project/inc/functions.php:459
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/final_project/inc/functions.php(459): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336/final_project/inc/functions.php(405): getGameInfo('1')
+#2 /home/ubuntu/workspace/cst336/final_project/updateGame.php(73): updateGames()
+#3 {main}
+  thrown in /home/ubuntu/workspace/cst336/final_project/inc/functions.php on line 459
+[12-Dec-2018 15:35:45 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'gametId' in 'where clause'' in /home/ubuntu/workspace/cst336/final_project/inc/functions.php:459
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/final_project/inc/functions.php(459): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336/final_project/inc/functions.php(405): getGameInfo('1')
+#2 /home/ubuntu/workspace/cst336/final_project/updateGame.php(99): updateGames()
+#3 {main}
+  thrown in /home/ubuntu/workspace/cst336/final_project/inc/functions.php on line 459
+[12-Dec-2018 16:00:50 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/cst336/final_project/updateGame.php on line 101
+[12-Dec-2018 16:00:50 UTC] PHP Stack trace:
+[12-Dec-2018 16:00:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/updateGame.php:0
+[12-Dec-2018 16:11:30 UTC] PHP Fatal error:  Call to undefined function displaytotal() in /home/ubuntu/workspace/cst336/final_project/scart.php on line 152
+[12-Dec-2018 16:11:30 UTC] PHP Stack trace:
+[12-Dec-2018 16:11:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/scart.php:0
+[12-Dec-2018 16:11:31 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 3' in /home/ubuntu/workspace/cst336/final_project/inc/functions.php:479
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/final_project/inc/functions.php(479): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336/final_project/gameInfo.php(99): displayProductInfo()
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336/final_project/inc/functions.php on line 479
+[12-Dec-2018 16:11:36 UTC] PHP Fatal error:  Call to undefined function displaytotal() in /home/ubuntu/workspace/cst336/final_project/scart.php on line 152
+[12-Dec-2018 16:11:36 UTC] PHP Stack trace:
+[12-Dec-2018 16:11:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/scart.php:0
+[12-Dec-2018 16:34:34 UTC] PHP Fatal error:  Call to undefined function displaytotal() in /home/ubuntu/workspace/cst336/final_project/scart.php on line 152
+[12-Dec-2018 16:34:34 UTC] PHP Stack trace:
+[12-Dec-2018 16:34:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/scart.php:0
+[12-Dec-2018 17:16:52 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'category' cannot be null' in /home/ubuntu/workspace/cst336/final_project/inc/functions.php:396
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/final_project/inc/functions.php(396): PDOStatement->execute(Array)
+#1 /home/ubuntu/workspace/cst336/final_project/addGame.php(69): addGames()
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336/final_project/inc/functions.php on line 396

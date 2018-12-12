@@ -72,10 +72,20 @@
                 text-align:center;
                 padding: 5px;
             }
+            h2{
+                color:red;
+                text-align:center;
+            }
             footer {
                 text-align: center;
                 padding: 10px;
                 margin-top: 250px;
+            }
+            .home{
+                color: navy;
+            }
+            .home:hover{
+                color: blue;
             }
             .admin{
                 color: darkred;
@@ -100,7 +110,7 @@
                     <a class='navbar-brand' href='#'>GameCart</a>
                 </div>
                   <ul class='nav navbar-nav'>
-                    <li><a href='index.php'>Home</a></li>
+                    <li><a href='index.php'><span class='home'>Home</span></a></li>
                     <li><a href='login.php'><span class='admin'>Admin</span></a></li>
                 </ul>
             </div>

@@ -3,6 +3,7 @@ session_start();
 
 include 'inc/dbConnection.php';
 $dbConn = startConnection("project");
+//$pricetotal;
 
 function validateSession(){
     if (!isset($_SESSION['adminFullName'])) {
@@ -180,25 +181,27 @@ function filterGames() {
             $itemPrice = $record['price'];
             $itemImage = $record['image'];
             $itemId = $record['gameId'];
-            $itemConsole = $record['conId'];
+            $itemCon = $record['conId'];
+            $itemConsole = getConsole($itemCon);
+            $itemCat = $record['catId'];
+            $itemCategory = getCategory($itemCat);
             $itemYear = $record['year'];
             
             //Displaying things as a table
             echo "<tr>";
-            echo "<td> <img src='$itemImage' width=50> </td>";
+            echo "<td> <img src='$itemImage' width=60> </td>";
             echo "<td> <h4> <a href='gameInfo.php?gameId=".$record['gameId']."'> $itemName </a> </h4> </td>";
+            echo "<td> <h4>Category: $itemCategory</h4> </td>";
+            echo "<td> <h4>Console: $itemConsole</h4> </td>";
             echo "<td> <h4>Price: $$itemPrice</h4> </td>";
-            //echo "<td> <h4>Console: $itemDirector</h4> </td>";
-            //echo "<td> <h4>Starring: $itemActors</h4> </td>";
             echo "<td> <h4>Year: $itemYear </h4> </td>";
             
             
             //Hidden elements
             echo "<form method='POST'>";
             echo "<input type='hidden' name='itemName' value='$itemName'>";
-            //echo "<input type='hidden' name='itemDirector' value='$itemDirector'>";
-            //echo "<input type='hidden' name='itemActors' value='$itemActors'>";
-            //echo "<input type='hidden' name='itemRating' value='$itemRating'>";
+            echo "<input type='hidden' name='itemPrice' value='$itemPrice'>";
+            echo "<input type='hidden' name='itemConsole' value='$itemConsole'>";
             echo "<input type='hidden' name='itemImage' value='$itemImage'>";
             echo "<input type='hidden' name='itemYear' value='$itemYear'>";
             echo "<input type='hidden' name='itemId' value='$itemId'>";
@@ -225,6 +228,7 @@ function filterGames() {
 
 
 function displayCart(){
+    //global $pricetotal;
     if(isset($_SESSION['cart'])) {
         
         echo "<table class='table'>";
@@ -236,11 +240,9 @@ function displayCart(){
             echo "<tr>";
             
             //display data for item
-            echo "<td><img src ='" .$item['img']. "'></td>";
+            echo "<td><img src ='" .$item['image']. "'width=35></td>";
             echo "<td><h4> <a href='gameInfo.php?gameId=".$item['id']."'> ".$item['name']." </a> </h4></td>";
-            //echo "<td><h4>" .$item['console']. "</h4></td>";
-            echo "<td><h4>" .$item['price']. "</h4></td>";
-            //echo "<td><h4>" .$item['year']. " </h4></td>";
+            echo "<td><h4>$" .$item['price']. "</h4></td>";
             
             //update for this item
             echo '<form method = "post">';
@@ -264,10 +266,21 @@ function displayCart(){
         echo "<input type = 'hidden' name='removeAll' value = '1'>";
         echo "<button class = 'btn btn-danger'>Remove All</button>";
         echo '</form>';
-    }
+    } 
+    
 }
 
+// function updateTotal($price){
+//     global $pricetotal;
+    
+//     $pricetotal += $price;
+// }
 
+// function displayTotal(){
+//     global $pricetotal;
+    
+//     echo "<h2>Total Price: $$pricetotal </h2>";
+// }
 
 function displayCartCount() {
     //echo count($_SESSION['cart']);
@@ -286,6 +299,7 @@ function displayCartCount() {
 
 
 function addRemove() {
+    global $pricetotal;
     //if rmoveId sent, search cart for itemId
     if (isset($_POST['removeId'])) {
         foreach ($_SESSION['cart'] as $itemKey => $item){
@@ -307,6 +321,7 @@ function addRemove() {
         if($_POST['removeAll'] == 1) {
             $_SESSION['cart'] = array();
             unset($_POST['removeAll']);
+            //$pricetotal = 0;
         }
     }
 }
@@ -397,6 +412,14 @@ function deleteGames(){
 
 function updateGames(){
     global $dbConn;
+    //global $gameInfo;
+    
+    // if(isset($_GET['gameId'])){
+    
+    //     $gameInfo = getGameInfo($_GET['gameId']);
+    
+    //     //print_r($productInfo);
+    // }
     
     $title = $_GET['title'];
     $price = $_GET['price'];
@@ -410,7 +433,6 @@ function updateGames(){
     
     if(isset($_GET['updateProduct'])){ //user has submitted update form
     
-        //UPDATE `om_product` SET `price` = '300.00' WHERE `om_product`.`productId` = 1;
         //title, catId, category, conId, console, year, price, image
         $sql = "UPDATE proj_games 
                 SET title= :title,
@@ -440,18 +462,12 @@ function updateGames(){
         header("Location: admin.php");
     }
     
-    if(isset($_GET['gameId'])){
-    
-        $gameInfo = getGameInfo($_GET['gameId']);
-    
-        //print_r($productInfo);
-    }
 }
 
 function getGameInfo($game){
     global $dbConn;
     
-    $sql = "SELECT * FROM proj_games WHERE gametId = $game";
+    $sql = "SELECT * FROM proj_games WHERE gameId = $game";
     $stmt = $dbConn->prepare($sql);
     $stmt->execute();
     $record = $stmt->fetch(PDO::FETCH_ASSOC); //we're expecting multiple records   
@@ -459,66 +475,58 @@ function getGameInfo($game){
     return $record;
 }
 
-function displayProductInfo(){
+function displayGameInfo(){
     global $dbConn;
     
     
-    $movId = $_GET['movId'];
+    $gameId = $_GET['gameId'];
     $sql = "SELECT *
-            FROM proj_movies
-            WHERE movId = $movId";
+            FROM proj_games
+            WHERE gameId = $gameId";
     //NATURAL RIGHT JOIN om_product
     
-    //$np = array();
-    //$np[$movId] = $movId;
     
     $stmt = $dbConn->prepare($sql);
     $stmt->execute();
-    $records = $stmt->fetchAll(PDO::FETCH_ASSOC); //fetchAll returns an Array of Arrays
+    $record = $stmt->fetch(PDO::FETCH_ASSOC); //fetchAll returns an Array of Arrays
+    
+    $itemName = $record['title'];
+    $itemPrice = $record['price'];
+    $itemImage = $record['image'];
+    $itemId = $record['gameId'];
+    $itemCon = $record['conId'];
+    $itemConsole = getConsole($itemCon);
+    $itemCat = $record['catId'];
+    $itemCategory = getCategory($itemCat);
+    $itemYear = $record['year'];
     
     //echo $records[0]['productName'] . "<br>";
-    echo "<img src='" . $records[0]['image'] . "'  width='200'/><br>";
+    echo "<img src='" . $record['image'] . "'  width='200'/><br>";
     
-    foreach ($records as $record) {
+    //foreach ($records as $record) {
         echo "<br><br>";
         echo "<strong>Title:</strong>";
         echo "<br>";
-        echo $record[title];
+        echo $itemName;
         echo "<br><br>";
-        echo "<strong>Year:</strong>";
+        echo "<strong>Category:</strong>";
         echo "<br>";
-        echo $record[year]; 
+        echo $itemCategory;
         echo "<br><br>";
-        echo "<strong>Directed by:</strong>"; 
+        echo "<strong>Console:</strong>"; 
         echo "<br>";
-        echo $record[director]; 
+        echo $itemConsole;
         echo "<br><br>";
-        echo "<strong>Starring:</strong>"; 
+        echo "<strong>Year:</strong>"; 
         echo "<br>";
-        echo $record[actors]; 
+        echo $itemYear;
         echo "<br><br>";
-        echo "<strong>Rating:</strong>";
+        echo "<strong>Price:</strong>";
         echo "<br>";
-        echo $record[ratingId];
-        echo " Stars <br><br>";
+        echo $itemPrice;
         echo "<br><br>";
-    }
+    //}
     
-    // echo "<table>";
-    // echo "<tr>";
-    // echo "<th>Title </th><th>Year </th><th>Actors</th>";
-        
-    // foreach ($records as $record) {
-    //     echo "<tr>";    
-    //     echo "<td>" . $record[title] . "</td>";
-    //     echo "<td>" . $record[year] . "</td>";
-    //     echo "<td>" . $record[actors] . "</td>";
-    //     echo "</tr>";
-    // }
-    // echo "</table>";
-    
-    
-    //print_r($records);
 }
 
 ?>

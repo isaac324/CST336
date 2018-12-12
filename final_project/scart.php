@@ -107,6 +107,12 @@ include 'inc/functions.php';
                 padding: 10px;
                 margin-top: 250px;
             }
+            .home{
+                color: navy;
+            }
+            .home:hover{
+                color: blue;
+            }
             .admin{
                 color: darkred;
             }
@@ -129,7 +135,7 @@ include 'inc/functions.php';
                             <a class='navbar-brand' href='#'>GameCart</a>
                         </div>
                           <ul class='nav navbar-nav'>
-                            <li><a href='index.php'>Home</a></li>
+                            <li><a href='index.php'><span class='home'>Home</span></a></li>
                             <li><a href='login.php'><span class='admin'>Admin</span></a></li>
                             <li><a href='scart.php'>
                             <span class ='glyphicon glyphicon-shopping-cart' aria-hidden ='true'></span>
@@ -147,6 +153,8 @@ include 'inc/functions.php';
                         $rem = $_POST['removeAll'];
                         echo "$rem <br />";
                     }
+                    echo "<br><br>";
+                    
                 ?>
             </div>
         </div>

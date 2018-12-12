@@ -112,6 +112,7 @@ include 'inc/functions.php';
                         $("#type").html(data.category);
                         $("#console").html(data.console);
                         $("#year").html(data.year);
+                        $("#price").html(data.price);
                         $("#gameimage").attr('src', data.image);
                         $("#container").html("");
                         //alert(data); 
@@ -157,10 +158,11 @@ include 'inc/functions.php';
           <div id="container"></div>
         <div>
 	      
-	    <img id = "gameimage" src="" width=100><br><br>
-	    Category: <span id="type"> </span> <br> <br>
-        Console: <span id="console"> </span> <br> <br>
-        Year: <span id="year">
+	    <img id = "gameimage" src="" width=100> <br><br>
+	    Category: <span id="type"> </span> <br><br>
+        Console: <span id="console"> </span> <br><br>
+        Year: <span id="year"> </span> <br><br>
+        Price: <span id="price"></span>
 	      
 	      </div>
       </div>
