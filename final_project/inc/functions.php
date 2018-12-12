@@ -523,7 +523,7 @@ function displayGameInfo(){
         echo "<br><br>";
         echo "<strong>Price:</strong>";
         echo "<br>";
-        echo $itemPrice;
+        echo "$$itemPrice";
         echo "<br><br>";
     //}
     
