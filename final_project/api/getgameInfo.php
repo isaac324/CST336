@@ -1,5 +1,5 @@
 <?php
-include 'inc/dbConnection.php';
+include '../inc/dbConnection.php';
 $dbConn = startConnection("project");
 
 $sql ="SELECT * FROM proj_games WHERE gameId = ".$_GET['gameid'];

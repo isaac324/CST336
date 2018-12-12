@@ -68,17 +68,23 @@
         
         <title> Admin Login </title>
         <style>
-            body{
+            h1, form{
                 text-align:center;
+                padding: 5px;
             }
-            form{
-                display: inline-block;
+            footer {
+                text-align: center;
+                padding: 10px;
+                margin-top: 250px;
             }
-            h2{
-                color:red;
+            .admin{
+                color: darkred;
             }
-            footer{
-                margin-top: 200px;
+            .admin:hover{
+                color: red;
+            }
+            body{
+                background-color: Lightgrey;
             }
         </style>
             
@@ -101,11 +107,11 @@
         </nav>
         <br /> <br /> <br />
 
-        <h1> Game Cart - Admin Login </h1>
+        <h1> GameCart - Admin Login </h1>
         
         <form method="post">
-          Username:  <input type="text" name="username"/> <br>
-          Password:  <input type="password" name="password"/> <br>
+          Username:  <input type="text" name="username"/> <br><br>
+          Password:  <input type="password" name="password"/> <br><br>
           <input type="submit" name="loginform" value="Login">
         </form>
         <!--action="loginProcess.php"-->

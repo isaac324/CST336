@@ -19,14 +19,41 @@ function displayCategories() {
     $stmt = $dbConn->prepare($sql);
     $stmt->execute();
     $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    //print_r($records);
-    //echo "<hr>";
-    //echo $records[2] . "<br>";
-    //echo $records[1]['catDescription'] . "<br>";
     
     foreach ($records as $record) {
         echo "<option value='".$record['catId']."'>" . $record['catName'] . "</option>";
     }
+}
+
+function getCategory($cat) {
+    global $dbConn;
+    
+    $sql = "SELECT * FROM proj_category";
+    $stmt = $dbConn->prepare($sql);
+    $stmt->execute();
+    $records = $stmt->fetchAll(PDO::FETCH_ASSOC); //we're expecting multiple records   
+    
+    foreach($records as $record){
+        if($record['catId'] == $cat){
+            $category = $record['catName'];
+        }
+    }
+    
+    return $category;
+}
+
+function getCategories() {
+    global $dbConn;
+    
+    $sql = "SELECT * FROM proj_category";
+    $stmt = $dbConn->prepare($sql);
+    $stmt->execute();
+    $records = $stmt->fetchAll(PDO::FETCH_ASSOC); //we're expecting multiple records   
+    
+    //print_r($records);
+    
+    return $records;
+    
 }
 
 function displayConsoles() { 
@@ -37,14 +64,41 @@ function displayConsoles() {
     $stmt = $dbConn->prepare($sql);
     $stmt->execute();
     $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    //print_r($records);
-    //echo "<hr>";
-    //echo $records[2] . "<br>";
-    //echo $records[1]['catDescription'] . "<br>";
     
     foreach ($records as $record) {
         echo "<option value='".$record['conId']."'>" . $record['console'] . "</option>";
     }
+}
+
+function getConsole($con) {
+    global $dbConn;
+    
+    $sql = "SELECT * FROM proj_consoles";
+    $stmt = $dbConn->prepare($sql);
+    $stmt->execute();
+    $records = $stmt->fetchAll(PDO::FETCH_ASSOC); //we're expecting multiple records   
+    
+    foreach($records as $record){
+        if($record['conId'] == $con){
+            $console = $record['console'];
+        }
+    }
+    
+    return $console;
+}
+
+function getConsoles() {
+    global $dbConn;
+    
+    $sql = "SELECT * FROM proj_consoles";
+    $stmt = $dbConn->prepare($sql);
+    $stmt->execute();
+    $records = $stmt->fetchAll(PDO::FETCH_ASSOC); //we're expecting multiple records   
+    
+    //print_r($records);
+    
+    return $records;
+    
 }
 
 function filterGames() {
@@ -284,66 +338,187 @@ function getAllGames(){
     return $records;
 }
 
-// function displayProductInfo(){
-//     global $dbConn;
+function addGames(){
+    global $dbConn;
     
-    
-//     $movId = $_GET['movId'];
-//     $sql = "SELECT *
-//             FROM proj_movies
-//             WHERE movId = $movId";
-//     //NATURAL RIGHT JOIN om_product
-    
-//     //$np = array();
-//     //$np[$movId] = $movId;
-    
-//     $stmt = $dbConn->prepare($sql);
-//     $stmt->execute();
-//     $records = $stmt->fetchAll(PDO::FETCH_ASSOC); //fetchAll returns an Array of Arrays
-    
-//     //echo $records[0]['productName'] . "<br>";
-//     echo "<img src='" . $records[0]['image'] . "'  width='200'/><br>";
-    
-//     foreach ($records as $record) {
-//         echo "<br><br>";
-//         echo "<strong>Title:</strong>";
-//         echo "<br>";
-//         echo $record[title];
-//         echo "<br><br>";
-//         echo "<strong>Year:</strong>";
-//         echo "<br>";
-//         echo $record[year]; 
-//         echo "<br><br>";
-//         echo "<strong>Directed by:</strong>"; 
-//         echo "<br>";
-//         echo $record[director]; 
-//         echo "<br><br>";
-//         echo "<strong>Starring:</strong>"; 
-//         echo "<br>";
-//         echo $record[actors]; 
-//         echo "<br><br>";
-//         echo "<strong>Rating:</strong>";
-//         echo "<br>";
-//         echo $record[ratingId];
-//         echo " Stars <br><br>";
-//         echo "<br><br>";
-//     }
-    
-//     // echo "<table>";
-//     // echo "<tr>";
-//     // echo "<th>Title </th><th>Year </th><th>Actors</th>";
+    $title = $_GET['title'];
+    $price = $_GET['price'];
+    $catId = $_GET['catId'];
+    $conId = $_GET['conId'];
+    $year = $_GET['year'];
+    $image = $_GET['gameImage'];
         
-//     // foreach ($records as $record) {
-//     //     echo "<tr>";    
-//     //     echo "<td>" . $record[title] . "</td>";
-//     //     echo "<td>" . $record[year] . "</td>";
-//     //     echo "<td>" . $record[actors] . "</td>";
-//     //     echo "</tr>";
-//     // }
-//     // echo "</table>";
+    $console = getConsole($conId);
+    $category = getCategory($catId);
+    
+    if(isset($_GET['addGame'])) { //checks whether the form was submitted
+    
+        // $title = $_GET['title'];
+        // $price = $_GET['price'];
+        // $catId = $_GET['catId'];
+        // $conId = $_GET['conId'];
+        // $year = $_GET['year'];
+        // $image = $_GET['gameImage'];
+        
+        // $console = getConsole($conId);
+        // $category = getCategory($catId);
+        
+        //title, catId, category, conId, console, year, price, image
+        $sql = "INSERT INTO proj_games (title, catId, category, conId, console, year, price, image) 
+                VALUES (:title, :catId, :category, :conId, :console, :year, :price, :image);";
+        $np = array();
+        $np[":title"] = $title;
+        $np[":catId"] = $catId;
+        $np[":category"] = $category;
+        $np[":conId"] = $conId;
+        $np[":console"] = $console;
+        $np[":year"] = $year;
+        $np[":price"] = $price;
+        $np[":image"] = $image;
+        
+        $stmt = $dbConn->prepare($sql);
+        $stmt->execute($np);
+        echo "New Product was added!";
+        
+        header("Location: admin.php");
+    }
+
+}
+
+function deleteGames(){
+    global $dbConn;
+    
+    $sql = "DELETE FROM proj_games WHERE gameId = " . $_GET['gameId'];
+    $stmt=$dbConn->prepare($sql);
+    $stmt->execute();
+
+    header("Location: admin.php");
+}
+
+function updateGames(){
+    global $dbConn;
+    
+    $title = $_GET['title'];
+    $price = $_GET['price'];
+    $catId = $_GET['catId'];
+    $conId = $_GET['conId'];
+    $year = $_GET['year'];
+    $image = $_GET['gameImage'];
+        
+    $console = getConsole($conId);
+    $category = getCategory($catId);
+    
+    if(isset($_GET['updateProduct'])){ //user has submitted update form
+    
+        //UPDATE `om_product` SET `price` = '300.00' WHERE `om_product`.`productId` = 1;
+        //title, catId, category, conId, console, year, price, image
+        $sql = "UPDATE proj_games 
+                SET title= :title,
+                   catId = :catId,
+                   category = :category,
+                   conId = :conId,
+                   console = :console,
+                   year = :year,
+                   price = :price,
+                   image = :image
+                WHERE gameId = " . $_GET['gameId'];
+                
+        $np = array();
+        $np[":title"] = $title;
+        $np[":catId"] = $catId;
+        $np[":category"] = $category;
+        $np[":conId"] = $conId;
+        $np[":console"] = $console;
+        $np[":year"] = $year;
+        $np[":price"] = $price;
+        $np[":image"] = $image;
+        
+        $stmt = $dbConn->prepare($sql);
+        $stmt->execute($np);
+        //$record = $stmt->fetch(PDO::FETCH_ASSOC); //we're expecting just one record
+        
+        header("Location: admin.php");
+    }
+    
+    if(isset($_GET['gameId'])){
+    
+        $gameInfo = getGameInfo($_GET['gameId']);
+    
+        //print_r($productInfo);
+    }
+}
+
+function getGameInfo($game){
+    global $dbConn;
+    
+    $sql = "SELECT * FROM proj_games WHERE gametId = $game";
+    $stmt = $dbConn->prepare($sql);
+    $stmt->execute();
+    $record = $stmt->fetch(PDO::FETCH_ASSOC); //we're expecting multiple records   
+    
+    return $record;
+}
+
+function displayProductInfo(){
+    global $dbConn;
     
     
-//     //print_r($records);
-// }
+    $movId = $_GET['movId'];
+    $sql = "SELECT *
+            FROM proj_movies
+            WHERE movId = $movId";
+    //NATURAL RIGHT JOIN om_product
+    
+    //$np = array();
+    //$np[$movId] = $movId;
+    
+    $stmt = $dbConn->prepare($sql);
+    $stmt->execute();
+    $records = $stmt->fetchAll(PDO::FETCH_ASSOC); //fetchAll returns an Array of Arrays
+    
+    //echo $records[0]['productName'] . "<br>";
+    echo "<img src='" . $records[0]['image'] . "'  width='200'/><br>";
+    
+    foreach ($records as $record) {
+        echo "<br><br>";
+        echo "<strong>Title:</strong>";
+        echo "<br>";
+        echo $record[title];
+        echo "<br><br>";
+        echo "<strong>Year:</strong>";
+        echo "<br>";
+        echo $record[year]; 
+        echo "<br><br>";
+        echo "<strong>Directed by:</strong>"; 
+        echo "<br>";
+        echo $record[director]; 
+        echo "<br><br>";
+        echo "<strong>Starring:</strong>"; 
+        echo "<br>";
+        echo $record[actors]; 
+        echo "<br><br>";
+        echo "<strong>Rating:</strong>";
+        echo "<br>";
+        echo $record[ratingId];
+        echo " Stars <br><br>";
+        echo "<br><br>";
+    }
+    
+    // echo "<table>";
+    // echo "<tr>";
+    // echo "<th>Title </th><th>Year </th><th>Actors</th>";
+        
+    // foreach ($records as $record) {
+    //     echo "<tr>";    
+    //     echo "<td>" . $record[title] . "</td>";
+    //     echo "<td>" . $record[year] . "</td>";
+    //     echo "<td>" . $record[actors] . "</td>";
+    //     echo "</tr>";
+    // }
+    // echo "</table>";
+    
+    
+    //print_r($records);
+}
 
 ?>

@@ -127,3 +127,37 @@ Stack trace:
 #0 /home/ubuntu/workspace/cst336/final_project/getgameInfo.php(7): PDOStatement->execute()
 #1 {main}
   thrown in /home/ubuntu/workspace/cst336/final_project/getgameInfo.php on line 7
+[12-Dec-2018 12:13:10 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/ubuntu/workspace/cst336/final_project/getgameInfo.php:7
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/final_project/getgameInfo.php(7): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/final_project/getgameInfo.php on line 7
+[12-Dec-2018 12:15:34 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/ubuntu/workspace/cst336/final_project/getgameInfo.php:7
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/final_project/getgameInfo.php(7): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/final_project/getgameInfo.php on line 7
+[12-Dec-2018 13:22:23 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php:3) in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php on line 3
+[12-Dec-2018 13:22:23 UTC] PHP Stack trace:
+[12-Dec-2018 13:22:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/addGame.php:0
+[12-Dec-2018 13:22:23 UTC] PHP   2. include() /home/ubuntu/workspace/cst336/final_project/addGame.php:6
+[12-Dec-2018 13:25:35 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php:3) in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php on line 3
+[12-Dec-2018 13:25:35 UTC] PHP Stack trace:
+[12-Dec-2018 13:25:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/addGame.php:0
+[12-Dec-2018 13:25:35 UTC] PHP   2. include() /home/ubuntu/workspace/cst336/final_project/addGame.php:6
+[12-Dec-2018 13:35:11 UTC] PHP Fatal error:  Call to undefined function displayCategories() in /home/ubuntu/workspace/cst336/final_project/addGame.php on line 57
+[12-Dec-2018 13:35:11 UTC] PHP Stack trace:
+[12-Dec-2018 13:35:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/addGame.php:0
+[12-Dec-2018 13:35:47 UTC] PHP Fatal error:  Call to undefined function displayCategories() in /home/ubuntu/workspace/cst336/final_project/addGame.php on line 57
+[12-Dec-2018 13:35:47 UTC] PHP Stack trace:
+[12-Dec-2018 13:35:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/addGame.php:0
+[12-Dec-2018 13:36:58 UTC] PHP Fatal error:  Call to undefined function displayCategories() in /home/ubuntu/workspace/cst336/final_project/addGame.php on line 57
+[12-Dec-2018 13:36:58 UTC] PHP Stack trace:
+[12-Dec-2018 13:36:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/addGame.php:0
+[12-Dec-2018 13:41:55 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php:3) in /home/ubuntu/workspace/cst336/final_project/inc/dbConnection.php on line 3
+[12-Dec-2018 13:41:55 UTC] PHP Stack trace:
+[12-Dec-2018 13:41:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/deleteGame.php:0
+[12-Dec-2018 13:41:55 UTC] PHP   2. include() /home/ubuntu/workspace/cst336/final_project/deleteGame.php:6
+[12-Dec-2018 13:48:13 UTC] PHP Fatal error:  Call to undefined function deleteGames() in /home/ubuntu/workspace/cst336/final_project/deleteGame.php on line 2
+[12-Dec-2018 13:48:13 UTC] PHP Stack trace:
+[12-Dec-2018 13:48:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/deleteGame.php:0

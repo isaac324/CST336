@@ -18,8 +18,11 @@ include 'inc/functions.php';
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>   
+        
+        <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+        <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
         
         <!--<link rel="stylesheet" href="css/styles.css" type="text/css" />-->
         <style>
@@ -41,6 +44,9 @@ include 'inc/functions.php';
             }
             .admin:hover{
                 color: red;
+            }
+            body{
+                background-color: Lightgrey;
             }
         </style>
         <script>
@@ -77,9 +83,10 @@ include 'inc/functions.php';
         <!--</nav>-->
         <!--<br /> <br /> <br />-->
         
-        <h1> Admin Page </h1>
+        <h1> Admin Section </h1>
+        <hr>
         
-        <form action="addProduct.php">
+        <form action="addGame.php">
             <input type="submit" value="Add New Product">
         </form>
         <form action="index.php">
@@ -97,12 +104,12 @@ include 'inc/functions.php';
 	              $.ajax({
 
                     type: "GET",
-                    url: "getgameInfo.php",
+                    url: "api/getgameInfo.php",
                     dataType: "json",
                     data: { "gameid": $(this).attr('gameId') },
                     success: function(data, status) {
                         $("#gamename").html(data.title);
-                        $("#category").html(data.category);
+                        $("#type").html(data.category);
                         $("#console").html(data.console);
                         $("#year").html(data.year);
                         $("#gameimage").attr('src', data.image);
@@ -124,12 +131,12 @@ include 'inc/functions.php';
 	    foreach($games as $game) {
 	        //echo "<a href='#' class = 'gameLink' id = '". $game['gameId']. "'>". $game['title'] ." </a>";
 	        //echo "<hr>";
-	        echo "<a class='btn btn-primary' role='button' href='updateProduct.php?gameId=".$game['gameId']."'>Update</a>";
-	        echo "<form action='deleteProduct.php' onsubmit='return confirmDelete()'>";
-	        echo "   <input type='hidden' name='gameId' value='".$record['gameId']."'>";
+	        echo "<a class='btn btn-primary' role='button' href='updateGame.php?gameId=".$game['gameId']."'>Update</a>";
+	        echo "<form action='deleteGame.php' onsubmit='return confirmDelete()'>";
+	        echo "   <input type='hidden' name='gameId' value='".$game['gameId']."'>";
 	        echo "   <button class='btn btn-outline-danger' type='submit'>Delete</button>";
 	        echo "</form>";
-	        echo "<a href='#' class = 'gameLink' id = '". $game['gameId']. "'>". $game['title'] ." </a>";
+	        echo "<a href='#' class = 'gameLink' gameid = '". $game['gameId']. "'>". $game['title'] ." </a>";
 	        echo "<hr>";
 	    }
 	  ?>
@@ -150,9 +157,8 @@ include 'inc/functions.php';
           <div id="container"></div>
         <div>
 	      
-	    <img id = "gameimage" src="" width=40><br><br>  
-	    Title: <span id="gamename"> </span> <br> <br>
-	    Type: <span id="category"> </span> <br> <br>
+	    <img id = "gameimage" src="" width=100><br><br>
+	    Category: <span id="type"> </span> <br> <br>
         Console: <span id="console"> </span> <br> <br>
         Year: <span id="year">
 	      

@@ -61,6 +61,9 @@
             .admin:hover{
                 color: red;
             }
+            body{
+                background-color: Lightgrey;
+            }
         </style>
     </head>
     <body>
