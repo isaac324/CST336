@@ -108,16 +108,6 @@ include 'inc/functions.php';
                     dataType: "json",
                     data: { "gameid": $(this).attr('gameId') },
                     success: function(data, status) {
-                        $("#gamename").html(data.title);
-                        $("#type").html(data.category);
-                        $("#console").html(data.console);
-                        $("#year").html(data.year);
-                        $("#price").html(data.price);
-                        $("#gameimage").attr('src', data.image);
-                        $("#container").html("");
-                        //alert(data); 
-                       
-                        
                     
                     },
 	          }); // ajax closing

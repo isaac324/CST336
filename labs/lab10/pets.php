@@ -53,7 +53,7 @@ function getAllPets(){
                     success: function(data, status) {
                         $("#petname").html(data.name);
                         $("#breed").html(data.breed);
-                        $("#age").html(2018 - data.yob) ;
+                        $("#age").html(2018 - data.yob);
                         $("#description").html(data.description);
                         $("#petImage").attr('src', "img/" + data.pictureURL);
                         $("#container").html("");
